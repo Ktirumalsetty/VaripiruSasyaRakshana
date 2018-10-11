@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ChidapuruguluActivity"
+    tools:showIn="@layout/activity_chidapurugulu">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_menu_one"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:onClick="onClickMenuItemOne"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/img_menu_sudi_tegulu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_sudi_tegulu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorYellow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                tools:layout_editor_absoluteY="111dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_two"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/img_menu_tataku_thegulu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_tataku_tegulu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                tools:layout_editor_absoluteY="111dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_three"
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/img_menu_kampu_nalli"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_kampu_nalli"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_four"
+
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/img_menu_kandamu_toluchu_purugu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_kandamu_toluchu_purugu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_five"
+
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/img_menu_tella_rogamu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_tella_rogamu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_six"
+
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/img_menu_gottapu_rogam"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_gottapu_rogam"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_seven"
+
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/img_menu_kandamu_toluchu_purugu_two"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_kandamu_toluchu_purugu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_eight"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="95dp"
+                android:layout_height="95dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/img_menu_aaku_nalli"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_aaku_nalli"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

@@ -18,7 +18,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/ll_menu_one"
+            android:id="@+id/ll_sudi_tegulu"
             style="@style/menuLinearlayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
                 android:paddingLeft="5dp"
                 android:text="@string/label_sudi_tegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 tools:layout_editor_absoluteY="111dp" />

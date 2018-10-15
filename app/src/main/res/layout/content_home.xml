@@ -13,17 +13,15 @@
         android:id="@+id/btn_kalupu_mokkalu"
         android:layout_width="@dimen/home_button_width"
         android:layout_height="@dimen/home_button_height"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/img_kalupu_mokkalu"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_arogyamina_panta"
-        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintHorizontal_chainStyle="spread"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
@@ -99,6 +97,15 @@
         app:layout_constraintStart_toEndOf="@+id/btn_kalupu_mokkalu"
         app:layout_constraintTop_toBottomOf="@+id/btn_chida_purugulu"
         app:layout_constraintVertical_bias="0.376" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="299dp" />
 
     <!--<TextView
         android:id="@+id/textView"

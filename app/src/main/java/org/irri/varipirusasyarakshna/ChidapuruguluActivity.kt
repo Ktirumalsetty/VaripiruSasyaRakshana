@@ -25,7 +25,7 @@ class ChidapuruguluActivity : AppCompatActivity() {
     }
 
     fun onClickMenuItemOne(view: View?){
-        var intent = Intent(this,MainActivity::class.java)
+        var intent = Intent(this,DetailsActivity::class.java)
         startActivity(intent)
 
     }

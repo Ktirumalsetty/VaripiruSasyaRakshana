@@ -16,7 +16,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".HomeMenuActivity"
             android:label="@string/home_title"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
@@ -29,7 +29,15 @@
         <activity
             android:name=".ChidapuruguluActivity"
             android:label="@string/title_activity_chidapurugulu"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".DetailsActivity"
+            android:label="@string/title_activity_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ChidapuruguluMenuActivity"
+            android:label="@string/title_activity_chidapurugulu"></activity>
+        <activity android:name=".ThegulluMenuActivity"></activity>
     </application>
 
 </manifest>

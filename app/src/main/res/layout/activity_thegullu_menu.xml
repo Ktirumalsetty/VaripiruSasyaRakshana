@@ -7,8 +7,7 @@
     android:layout_centerVertical="true"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".ChidapuruguluActivity"
-    tools:showIn="@layout/activity_chidapurugulu"
+
     tools:ignore="MissingDefaultResource">
 
     <LinearLayout
@@ -18,7 +17,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@+id/ll_menu_one"
+            android:id="@+id/ll_aggi_tegulu"
             style="@style/menuLinearlayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +33,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/img_menu_sudi_tegulu"
+                app:srcCompat="@drawable/menu_aggi_thegulu"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -43,12 +42,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="@string/label_sudi_tegulu"
+                android:text="@string/label_aggi_thegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                tools:layout_editor_absoluteY="111dp" />
+                 />
 
         </LinearLayout>
 
@@ -66,7 +62,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/img_menu_tataku_thegulu"
+                app:srcCompat="@drawable/menu_pamu_poda_thegulu"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -74,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="@string/label_tataku_tegulu"
+                android:text="@string/label_pamu_poda_tegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
@@ -96,7 +92,7 @@
                 android:layout_height="90dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                app:srcCompat="@drawable/img_menu_kampu_nalli"
+                app:srcCompat="@drawable/menu_godhuma_akumacha_thegulu"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -104,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="@string/label_kampu_nalli"
+                android:text="@string/label_godhuma_akumacha__thegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
@@ -124,7 +120,7 @@
                 android:layout_height="90dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                app:srcCompat="@drawable/img_menu_kandamu_toluchu_purugu"
+                app:srcCompat="@drawable/menu_potta_kullu_thegulu"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -132,7 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="@string/label_kandamu_toluchu_purugu"
+                android:text="@string/label_potta_kullu_tegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
@@ -152,7 +148,7 @@
                 android:layout_height="90dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                app:srcCompat="@drawable/img_menu_tella_rogamu"
+                app:srcCompat="@drawable/menu_mani_pandu_thegulu"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -160,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="@string/label_tella_rogamu"
+                android:text="@string/label_mani_pandu_thegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
         </LinearLayout>
@@ -180,7 +176,7 @@
                 android:layout_height="90dp"
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
-                app:srcCompat="@drawable/img_menu_gottapu_rogam"
+                app:srcCompat="@drawable/menu_bacteria_endu_thegulu"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -188,7 +184,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:paddingLeft="5dp"
-                android:text="@string/label_gottapu_rogam"
+                android:text="@string/label_bacteria_endu_thegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
 
         </LinearLayout>

@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         findViewById(R.id.btn_chida_purugulu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(HomeActivity.this,ChidapuruguluActivity.class));
+                startActivity(new Intent(HomeActivity.this,DetailsActivity.class));
             }
         });
 

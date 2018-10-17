@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_vooda"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:onClick="onClickMenuItemOne"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/menu_vooda"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_vooda"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_thunga"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/menu_thunga"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_thunga"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_vedalpaku_kalupu"
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/menu_vedalpaku_kalupu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_vedalpaku_kalupu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_neti_kalupu"
+
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/menu_neti_kalupu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_neti_kalupu"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

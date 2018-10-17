@@ -307,6 +307,15 @@ o పిలక దశలో వుంటే క్లోరాన్ట్రి
     <string name="label_potta_kullu_tegulu">పొట్ట కుళ్ళు తెగులు</string>
     <string name="label_mani_pandu_thegulu">మానిపండు తెగులు / కాటుక తెగులు</string>
     <string name="label_bacteria_endu_thegulu">బాక్టీరియా ఆకు ఎండు తెగులు</string>
+    <string name="label_tungro_virus_tegulu">టుంగ్రోవైరస్ తెగులు</string>
+    <string name="label_vooda">ఊద</string>
+    <string name="label_thunga">తుంగ</string>
+    <string name="label_vedalpaku_kalupu">వెడల్పాకు కలుపు</string>
+    <string name="label_neti_kalupu">నీటి కలుపు</string>
+    <string name="label_naru_madi">నారు మడి</string>
+    <string name="label_pilaka_dasa">పిలక దశ</string>
+    <string name="label_ankuramu_nundi">అంకురము నుండి</string>
+    <string name="label_natina_polam">నాటిన పొలము</string>
 
 
 </resources>

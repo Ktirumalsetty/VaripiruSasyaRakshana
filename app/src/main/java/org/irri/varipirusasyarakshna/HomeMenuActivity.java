@@ -33,5 +33,33 @@ public class HomeMenuActivity extends AppCompatActivity {
             }
         });
 
+        llThegullu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeMenuActivity.this,ThegulluMenuActivity.class));
+            }
+        });
+
+        llKalupuMokkalu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeMenuActivity.this,KalupuMokkaluActivity.class));
+            }
+        });
+
+        llVividhaDasalu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeMenuActivity.this,VividhaDasaluMenuActivity.class));
+            }
+        });
+
+        llLakshanalu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeMenuActivity.this,LakshanaluMenuActivity.class));
+            }
+        });
+
     }
 }

@@ -76,9 +76,7 @@
                 android:paddingLeft="5dp"
                 android:text="@string/label_tataku_tegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                tools:layout_editor_absoluteY="111dp" />
+                />
 
         </LinearLayout>
 
@@ -109,33 +107,33 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/ll_menu_four"
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_menu_four"-->
 
 
-            style="@style/menuLinearlayoutStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal">
+            <!--style="@style/menuLinearlayoutStyle"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="5dp"-->
+            <!--android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginStart="8dp"
-                app:srcCompat="@drawable/img_menu_kandamu_toluchu_purugu"
-                tools:layout_editor_absoluteY="16dp" />
+            <!--<ImageView-->
+                <!--android:layout_width="90dp"-->
+                <!--android:layout_height="90dp"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--app:srcCompat="@drawable/img_menu_kandamu_toluchu_purugu"-->
+                <!--tools:layout_editor_absoluteY="16dp" />-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:paddingLeft="5dp"
-                android:text="@string/label_kandamu_toluchu_purugu"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:paddingLeft="5dp"-->
+                <!--android:text="@string/label_kandamu_toluchu_purugu"-->
+                <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />-->
 
-        </LinearLayout>
+        <!--</LinearLayout>-->
 
         <LinearLayout
             android:id="@+id/ll_menu_five"

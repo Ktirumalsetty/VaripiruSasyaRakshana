@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerVertical="true"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    tools:ignore="MissingDefaultResource">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_menu_naru_madi"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/white"
+            android:clickable="true"
+            android:onClick="onClickMenuItemOne"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/menu_naru_madi"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_naru_madi"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_pilaka_dasa"
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/menu_pilaka_dasa"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_pilaka_dasa"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_ankuramu_nundi"
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/menu_ankuramu_nundi"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_ankuramu_nundi"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_natina_polam"
+
+
+            style="@style/menuLinearlayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:srcCompat="@drawable/menu_natina_polamu"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:text="@string/label_natina_polam"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

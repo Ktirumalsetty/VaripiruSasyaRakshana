@@ -1,10 +1,12 @@
 package org.irri.varipirusasyarakshna;
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -78,7 +80,16 @@ public class HowToIdentifyFragment extends Fragment {
         mTextViewContent = view.findViewById(R.id.tv_content);
         mWebView = view.findViewById(R.id.webview);
         mImageViewOne = view.findViewById(R.id.image1);
-
+        TextView mTvNavigateTab2 = view.findViewById(R.id.tv_navigate_tab2);
+        mTvNavigateTab2.setPaintFlags(mTvNavigateTab2.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        mTvNavigateTab2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ViewPager  viewPager = (ViewPager) getActivity().findViewById(
+                        R.id.container);
+                viewPager.setCurrentItem(1);
+            }
+        });
         loadContent(R.string.sudi_thegulu_identify);
         new Handler().postDelayed(new Runnable() {
             @Override

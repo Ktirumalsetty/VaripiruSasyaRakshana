@@ -37,6 +37,8 @@ public class DetailsActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+    String mDetailPageName;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,7 @@ public class DetailsActivity extends AppCompatActivity {
         toolbar.setContentInsetsAbsolute(0,0);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
+        mDetailPageName = getIntent().getStringExtra("detail_page_name");
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
@@ -144,10 +147,10 @@ public class DetailsActivity extends AppCompatActivity {
 //            return PlaceholderFragment.newInstance(position + 1);
             switch (position){
                 case 0:
-                  return  new HowToIdentifyFragment();
+                  return  HowToIdentifyFragment.newInstance(mDetailPageName,"");
 
                 case 1:
-                  return  new ProprietaryMethodsFragment();
+                  return  ProprietaryMethodsFragment.newInstance(mDetailPageName,"");
 
             }
             return null;

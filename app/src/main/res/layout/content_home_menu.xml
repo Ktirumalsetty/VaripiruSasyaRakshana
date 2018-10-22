@@ -1,184 +1,234 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/snackbar_contaner"
+    android:id="@+id/scroll"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_centerVertical="true"
-    android:layout_gravity="center"
-    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:layout_centerVertical="true"
+
     >
 
 
     <LinearLayout
+
         android:id="@+id/ll_one"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@+id/ll_chida_purugulu"
-            android:clickable="true"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            style="@style/DashBoardCardView"
+                        >
 
-            <ImageView
-                android:src="@drawable/img_chida_purugulu"
-                android:id="@+id/iv_"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
-
-            <TextView
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/title_activity_chidapurugulu"
+            <LinearLayout
+                android:id="@+id/ll_chida_purugulu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/ll_tegullu"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:src="@drawable/img_tegullu"
+                <org.irri.varipirusasyarakshna.RoundishImageView
 
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
+                    android:id="@+id/iv_"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/img_chida_purugulu_r"
+                    app:cornerRadius="@dimen/round_corner_radius"
+                    app:roundedCorners="topLeft|topRight" />
 
-            <TextView
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/label_thegullu"
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:text="@string/title_activity_chidapurugulu"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/black"
+                   style="@style/DasgBoardLabel" />
+
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/DashBoardCardView"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_tegullu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <org.irri.varipirusasyarakshna.RoundishImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/img_tegullu_r"
+                    app:cornerRadius="@dimen/round_corner_radius"
+                    app:roundedCorners="topLeft|topRight" />
+
+                <TextView
+                    style="@style/DasgBoardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/label_thegullu"
+                    android:textColor="@android:color/black" />
 
 
-        </LinearLayout>
-
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
 
         android:id="@+id/ll_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ll_one"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@+id/ll_vividha_dasalu"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            style="@style/DashBoardCardView"
+            >
 
-            <ImageView
-                android:src="@drawable/menu_piru_vividha_dasalu"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
-
-            <TextView
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/label_vividha_dasalu"
+            <LinearLayout
+                android:id="@+id/ll_vividha_dasalu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
 
-        <LinearLayout
-            android:id="@+id/ll_arogya_panta"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                android:orientation="vertical">
 
-            <ImageView
-                android:src="@drawable/aragya_panta"
+                <org.irri.varipirusasyarakshna.RoundishImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/menu_piru_vividha_dasalu_r"
+                    app:cornerRadius="@dimen/round_corner_radius"
+                    app:roundedCorners="topLeft|topRight" />
 
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
+                <TextView
+                    style="@style/DasgBoardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/label_vividha_dasalu"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
-            <TextView
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/label_arogya_panta"
+        <android.support.v7.widget.CardView
+            style="@style/DashBoardCardView"
+            >
+            <LinearLayout
+                android:id="@+id/ll_arogya_panta"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+                <org.irri.varipirusasyarakshna.RoundishImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/aragya_panta_r"
+                    app:cornerRadius="@dimen/round_corner_radius"
+                    app:roundedCorners="topLeft|topRight" />
+
+                <TextView
+                    style="@style/DasgBoardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/label_arogya_panta"
+                    android:textColor="@android:color/black" />
 
 
-        </LinearLayout>
-
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/ll_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/ll_two"
         android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:orientation="horizontal">
 
-        <LinearLayout
-            android:id="@+id/ll_kalupu_mokkalu"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            style="@style/DashBoardCardView"
+            >
 
-            <ImageView
-                android:src="@drawable/img_kalupu_mokkalu"
-
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
-
-            <TextView
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/label_kalupu_mokkalu"
+            <LinearLayout
+                android:id="@+id/ll_kalupu_mokkalu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
+                android:layout_height="wrap_content"
 
-        <LinearLayout
-            android:id="@+id/ll_kanipinche_lakshanalu"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:orientation="vertical"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                android:orientation="vertical"
+                >
 
-            <ImageView
-                android:src="@drawable/img_menu_kanipinche_lakshanalu"
-                android:layout_width="100dp"
-                android:layout_height="100dp" />
+                <org.irri.varipirusasyarakshna.RoundishImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/img_kalupu_mokkalu_r"
+                    app:cornerRadius="@dimen/round_corner_radius"
+                    app:roundedCorners="topLeft|topRight" />
 
-            <TextView
-                android:textColor="@android:color/black"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/label_kanipinche_lakshanalu"
+                <TextView
+                    style="@style/DasgBoardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/label_kalupu_mokkalu"
+                    android:textColor="@android:color/black" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            style="@style/DashBoardCardView"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_kanipinche_lakshanalu"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical"
+                >
+
+                <org.irri.varipirusasyarakshna.RoundishImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/img_menu_kanipinche_lakshanalu_r"
+                    app:cornerRadius="@dimen/round_corner_radius"
+                    app:roundedCorners="topLeft|topRight" />
+
+                <TextView
+                    style="@style/DasgBoardLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@string/label_kanipinche_lakshanalu"
+                    android:textColor="@android:color/black" />
 
 
-        </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
 
 
     </LinearLayout>
 
 
 </RelativeLayout>
+</ScrollView>

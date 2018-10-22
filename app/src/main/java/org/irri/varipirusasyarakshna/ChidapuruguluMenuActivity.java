@@ -16,7 +16,7 @@ public class ChidapuruguluMenuActivity extends AppCompatActivity {
         findViewById(R.id.ll_sudi_tegulu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class));
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_name","sudi"));
             }
         });
     }

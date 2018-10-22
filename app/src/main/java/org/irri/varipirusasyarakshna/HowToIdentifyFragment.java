@@ -7,12 +7,23 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import org.irri.varipirusasyarakshna.adapter.MyAdapter;
+import org.irri.varipirusasyarakshna.model.FindImage;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 /**
@@ -33,13 +44,25 @@ public class HowToIdentifyFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    String style = " <body style=\"text-align:justify;color:black;font-size:120%;\">";
+    String style = " <body style=\"text-align:justify;color:black;font-size:110%;\">";
 
     private OnFragmentInteractionListener mListener;
 
     TextView mTextViewContent;
     WebView mWebView;
     ImageView mImageViewOne;
+    RecyclerView mRecyclerView;
+
+//    int[] mSudiTheguluImageUrls ={R.drawable.img_aragya_panta,R.drawable.aragya_panta_r};
+//    String[] mSudiImageTitles = {"test","test2"};
+    List<FindImage> mFindImages;
+    Map<String,Integer> mSudimap = new HashMap() {{
+        put("దోమ పోటు - తొలిదశ", R.drawable.sudi_1);
+        put("దోమ పోటు తుదిదశ", R.drawable.sudi_2);
+        put("గోధుమ వర్ణపు దోమ పురుగులు", R.drawable.sudi_3);
+        put("తెల్ల వీపు దోమ పురుగులు", R.drawable.sudi_4);
+        put("కుబుసము లాంటి దోమల చర్మము", R.drawable.sudi_5);
+    }};
 
     public HowToIdentifyFragment() {
         // Required empty public constructor
@@ -69,6 +92,18 @@ public class HowToIdentifyFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+//            if (mParam1.equals("sudi")){
+//                List<FindImage> values = mSudimap.values().stream().collect(Collectors.toList());
+//
+//            }
+            if (mParam1.equals("sudi")){
+                mFindImages = new ArrayList<>();
+                for (Map.Entry<String, Integer> entry : mSudimap.entrySet()) {
+                    System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+                    mFindImages.add(new FindImage(entry.getKey().toString(),mSudimap.get(entry.getKey().toString())));
+                }
+            }
+
         }
     }
 
@@ -79,7 +114,8 @@ public class HowToIdentifyFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_how_to_identify, container, false);
         mTextViewContent = view.findViewById(R.id.tv_content);
         mWebView = view.findViewById(R.id.webview);
-        mImageViewOne = view.findViewById(R.id.image1);
+//        mImageViewOne = view.findViewById(R.id.image1);
+        mRecyclerView = view.findViewById(R.id.rv_images);
         TextView mTvNavigateTab2 = view.findViewById(R.id.tv_navigate_tab2);
         mTvNavigateTab2.setPaintFlags(mTvNavigateTab2.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         mTvNavigateTab2.setOnClickListener(new View.OnClickListener() {
@@ -94,9 +130,15 @@ public class HowToIdentifyFragment extends Fragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                mImageViewOne.setImageDrawable(getResources().getDrawable(R.drawable.rice_protection));
+//                mImageViewOne.setImageDrawable(getResources().getDrawable(R.drawable.rice_protection));
+                GridLayoutManager linearLayoutManager = new GridLayoutManager(getActivity(),2);
+                mRecyclerView.setLayoutManager(linearLayoutManager);
+                MyAdapter adapter = new MyAdapter(getActivity(),mFindImages);
+                mRecyclerView.setAdapter(adapter);
             }
         }, 1000);
+
+
         return view;
     }
 

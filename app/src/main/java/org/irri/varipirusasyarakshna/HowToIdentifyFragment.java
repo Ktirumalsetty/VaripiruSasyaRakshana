@@ -16,11 +16,14 @@ import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.irri.varipirusasyarakshna.adapter.AutoFitGridLayoutManager;
+import org.irri.varipirusasyarakshna.adapter.GridSpacingItemDecoration;
 import org.irri.varipirusasyarakshna.adapter.MyAdapter;
 import org.irri.varipirusasyarakshna.model.FindImage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -56,7 +59,7 @@ public class HowToIdentifyFragment extends Fragment {
 //    int[] mSudiTheguluImageUrls ={R.drawable.img_aragya_panta,R.drawable.aragya_panta_r};
 //    String[] mSudiImageTitles = {"test","test2"};
     List<FindImage> mFindImages;
-    Map<String,Integer> mSudimap = new HashMap() {{
+    Map<String,Integer> mSudimap = new LinkedHashMap() {{
         put("దోమ పోటు - తొలిదశ", R.drawable.sudi_1);
         put("దోమ పోటు తుదిదశ", R.drawable.sudi_2);
         put("గోధుమ వర్ణపు దోమ పురుగులు", R.drawable.sudi_3);
@@ -131,8 +134,13 @@ public class HowToIdentifyFragment extends Fragment {
             @Override
             public void run() {
 //                mImageViewOne.setImageDrawable(getResources().getDrawable(R.drawable.rice_protection));
-                GridLayoutManager linearLayoutManager = new GridLayoutManager(getActivity(),2);
+                GridLayoutManager linearLayoutManager = new GridLayoutManager(getActivity(),2,GridLayoutManager.VERTICAL, false);
+//                mRecyclerView.setHasFixedSize(true);
                 mRecyclerView.setLayoutManager(linearLayoutManager);
+                int spanCount = 2; // 3 columns
+                int spacing = 50; // 50px
+                boolean includeEdge = false;
+                mRecyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
                 MyAdapter adapter = new MyAdapter(getActivity(),mFindImages);
                 mRecyclerView.setAdapter(adapter);
             }

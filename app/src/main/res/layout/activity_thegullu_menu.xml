@@ -49,7 +49,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_menu_two"
+            android:id="@+id/ll_pamu_poda_thegulu"
             style="@style/menuLinearlayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

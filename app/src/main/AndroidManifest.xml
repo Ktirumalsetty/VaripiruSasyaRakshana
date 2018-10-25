@@ -26,10 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--<activity-->
-            <!--android:name=".ChidapuruguluActivity"-->
-            <!--android:label="@string/title_activity_chidapurugulu"-->
-            <!--android:theme="@style/AppTheme.NoActionBar" />-->
+        <!-- <activity -->
+        <!-- android:name=".ChidapuruguluActivity" -->
+        <!-- android:label="@string/title_activity_chidapurugulu" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar" /> -->
         <activity
             android:name=".DetailsActivity"
             android:label="@string/title_activity_details"
@@ -37,10 +37,21 @@
         <activity
             android:name=".ChidapuruguluMenuActivity"
             android:label="@string/title_activity_chidapurugulu" />
-        <activity android:name=".ThegulluMenuActivity" android:label="@string/label_thegullu" />
-        <activity android:name=".KalupuMokkaluActivity" android:label="@string/label_kalupu_mokkalu" />
-        <activity android:name=".VividhaDasaluMenuActivity" android:label="@string/label_vividha_dasalu" />
-        <activity android:name=".LakshanaluMenuActivity" android:label="@string/label_kanipinche_lakshanalu" />
+        <activity
+            android:name=".ThegulluMenuActivity"
+            android:label="@string/label_thegullu" />
+        <activity
+            android:name=".KalupuMokkaluActivity"
+            android:label="@string/label_kalupu_mokkalu" />
+        <activity
+            android:name=".VividhaDasaluMenuActivity"
+            android:label="@string/label_vividha_dasalu" />
+        <activity
+            android:name=".LakshanaluMenuActivity"
+            android:label="@string/label_kanipinche_lakshanalu" />
+        <activity android:name=".PiruVividhaDasaluDetailedActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            ></activity>
     </application>
 
 </manifest>

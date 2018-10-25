@@ -12,6 +12,12 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.TextView;
 
+import org.irri.varipirusasyarakshna.model.FindImage;
+import org.irri.varipirusasyarakshna.model.MethdodsSource;
+
+import java.util.ArrayList;
+import java.util.Map;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -28,13 +34,14 @@ public class ProprietaryMethodsFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     String style = " <body style=\"text-align:justify;color:black;font-size:100%;\">";
     // TODO: Rename and change types of parameters
-    private String mParam1;
+    private int mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
 
     TextView mTextViewContent;
     WebView mWebView;
+    String stringRes;
 
     public ProprietaryMethodsFragment() {
         // Required empty public constructor
@@ -49,10 +56,10 @@ public class ProprietaryMethodsFragment extends Fragment {
      * @return A new instance of fragment ProprietaryMethodsFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ProprietaryMethodsFragment newInstance(String param1, String param2) {
+    public static ProprietaryMethodsFragment newInstance(int param1, String param2) {
         ProprietaryMethodsFragment fragment = new ProprietaryMethodsFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
+        args.putInt(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
@@ -62,8 +69,65 @@ public class ProprietaryMethodsFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
+            mParam1 = getArguments().getInt(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+
+            switch (mParam1) {
+                case MethdodsSource.SUDI_THEGULU:
+                    stringRes = getString(R.string.sudi_thegulu_prop_methods);
+                    break;
+                case MethdodsSource.THATAKU_THEGULU:
+                    stringRes = getString(R.string.thataku_thegulu_prop_methods);
+                    break;
+                case MethdodsSource.KAMPU_NALLI:
+                    stringRes = getString(R.string.kampu_nalli_prop_methods);
+                    break;
+                case MethdodsSource.THELLA_ROGAM:
+                    stringRes = getString(R.string.thella_rogam_prop_methods);
+                    break;
+                case MethdodsSource.GOTTAPU_ROGAM:
+                    stringRes = getString(R.string.gottapu_rogam_prop_methods);
+                    break;
+                case MethdodsSource.KANDAMU_THOLUCHU_PURUGU:
+                    stringRes = getString(R.string.kandamu_tholuchu_prop_methods);
+                    break;
+                case MethdodsSource.AAKU_NALLI:
+                    stringRes = getString(R.string.aaku_nalli_prop_methods);
+                    break;
+
+                case MethdodsSource.AGGI_THEGULU:
+                    stringRes = getString(R.string.aggi_thegulu_prop_methods);
+                    break;
+                case MethdodsSource.PAAMU_PODA_THEGULU:
+                    stringRes = getString(R.string.paamu_poda_prop_methods);
+                    break;
+                case MethdodsSource.GODHUMA_RANGU_AAKU_MACHA_THEGULU:
+                    stringRes = getString(R.string.godhuma_rangu_prop_methods);
+                    break;
+                case MethdodsSource.POTTA_KULLU_THEGULU:
+                    stringRes = getString(R.string.potta_kullu_prop_methods);
+                    break;
+                case MethdodsSource.MAANI_PANDU_THEGULU:
+                    stringRes = getString(R.string.mani_pandu_prop_methods);
+                    break;
+                case MethdodsSource.BACTERIA_AAKU_ENDU_THEGULU:
+                    stringRes = getString(R.string.bacteria_aaku_endu_prop_methods);
+                    break;
+                case MethdodsSource.TUNGRO_VIRUS_THEGULU:
+                    stringRes = getString(R.string.tungro_prop_methods);
+                    break;
+                case MethdodsSource.VOODA_KALUPU_MOKKA:
+                    stringRes = getString(R.string.vooda_prop_methods);
+                    break;
+                case MethdodsSource.VEDALPAKU_KALUPU:
+                    stringRes = getString(R.string.vedalpaku_aaku_kalupu_prop_methods);
+                    break;
+                case MethdodsSource.NEETI_KALUPU:
+                    stringRes = getString(R.string.neeti_kalupu_prop_methods);
+                    break;
+
+            }
+
         }
     }
 
@@ -71,21 +135,21 @@ public class ProprietaryMethodsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_proprietary_methods, container, false);
+        View view = inflater.inflate(R.layout.fragment_proprietary_methods, container, false);
         mWebView = view.findViewById(R.id.webview);
         WebSettings settings = mWebView.getSettings();
 //        settings.setUseWideViewPort(true);
 //        settings.setLoadWithOverviewMode(true);
 
 //        settings.setLayoutAlgorithm(WebSettings.LayoutAlgorithm.TEXT_AUTOSIZING);
-        loadContent(R.string.sudi_thegulu_prop_methods);
+        loadContent(stringRes);
 
         return view;
     }
 
-    private void loadContent(int content) {
+    private void loadContent(String content) {
         if (mWebView != null)
-            mWebView.loadData(style + getString(content) + "</body>", "text/html; charset=utf-8", "utf-8");
+            mWebView.loadData(style + content + "</body>", "text/html; charset=utf-8", "utf-8");
 
     }
 

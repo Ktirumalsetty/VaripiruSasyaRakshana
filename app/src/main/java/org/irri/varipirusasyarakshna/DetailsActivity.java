@@ -19,6 +19,8 @@ import android.view.ViewGroup;
 
 import android.widget.TextView;
 
+import org.irri.varipirusasyarakshna.model.MethdodsSource;
+
 
 public class DetailsActivity extends AppCompatActivity {
 
@@ -37,23 +39,24 @@ public class DetailsActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
-    String mDetailPageName;
+    int mDetailPageType;
+    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle(R.string.label_sudi_tegulu);
+//        toolbar.setTitle(R.string.label_sudi_tegulu);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setContentInsetsAbsolute(0,0);
+        toolbar.setContentInsetsAbsolute(0, 0);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mDetailPageName = getIntent().getStringExtra("detail_page_name");
+        mDetailPageType = getIntent().getIntExtra("detail_page_type", -1);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-
+        setPageTitle();
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
@@ -74,13 +77,75 @@ public class DetailsActivity extends AppCompatActivity {
 
     }
 
+    private void setPageTitle() {
+        switch (mDetailPageType) {
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_details, menu);
-        return true;
+            case MethdodsSource.SUDI_THEGULU:
+                toolbar.setTitle(R.string.label_sudi_tegulu);
+
+                break;
+            case MethdodsSource.THATAKU_THEGULU:
+                toolbar.setTitle(R.string.label_tataku_tegulu);
+                break;
+            case MethdodsSource.KAMPU_NALLI:
+                toolbar.setTitle(R.string.label_kampu_nalli);
+                break;
+            case MethdodsSource.THELLA_ROGAM:
+                toolbar.setTitle(R.string.label_tella_rogamu);
+                break;
+            case MethdodsSource.GOTTAPU_ROGAM:
+                toolbar.setTitle(R.string.label_gottapu_rogam);
+                break;
+            case MethdodsSource.KANDAMU_THOLUCHU_PURUGU:
+                toolbar.setTitle(R.string.label_kandamu_toluchu_purugu);
+                break;
+            case MethdodsSource.AAKU_NALLI:
+                toolbar.setTitle(R.string.label_aaku_nalli);
+                break;
+            case MethdodsSource.AGGI_THEGULU:
+                toolbar.setTitle(R.string.label_aggi_thegulu);
+                break;
+            case MethdodsSource.PAAMU_PODA_THEGULU:
+                toolbar.setTitle(R.string.label_pamu_poda_tegulu);
+                break;
+            case MethdodsSource.GODHUMA_RANGU_AAKU_MACHA_THEGULU:
+                toolbar.setTitle(R.string.label_godhuma_akumacha__thegulu);
+                break;
+            case MethdodsSource.POTTA_KULLU_THEGULU:
+                toolbar.setTitle(R.string.label_potta_kullu_tegulu);
+                break;
+            case MethdodsSource.MAANI_PANDU_THEGULU:
+                toolbar.setTitle(R.string.label_mani_pandu_thegulu);
+                break;
+            case MethdodsSource.BACTERIA_AAKU_ENDU_THEGULU:
+                toolbar.setTitle(R.string.label_bacteria_endu_thegulu);
+                break;
+            case MethdodsSource.TUNGRO_VIRUS_THEGULU:
+                toolbar.setTitle(R.string.label_tungro_virus_tegulu);
+                break;
+            case MethdodsSource.VOODA_KALUPU_MOKKA:
+                toolbar.setTitle(R.string.label_vooda);
+                break;
+            case MethdodsSource.THUNGA_JAATHI:
+                toolbar.setTitle(R.string.label_thunga);
+                break;
+            case MethdodsSource.VEDALPAKU_KALUPU:
+                toolbar.setTitle(R.string.label_vedalpaku_kalupu);
+                break;
+            case MethdodsSource.NEETI_KALUPU:
+                toolbar.setTitle(R.string.label_neti_kalupu);
+                break;
+
+        }
     }
+
+
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        getMenuInflater().inflate(R.menu.menu_details, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -145,12 +210,12 @@ public class DetailsActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
 //            return PlaceholderFragment.newInstance(position + 1);
-            switch (position){
+            switch (position) {
                 case 0:
-                  return  HowToIdentifyFragment.newInstance(mDetailPageName,"");
+                    return HowToIdentifyFragment.newInstance(mDetailPageType, "");
 
                 case 1:
-                  return  ProprietaryMethodsFragment.newInstance(mDetailPageName,"");
+                    return ProprietaryMethodsFragment.newInstance(mDetailPageType, "");
 
             }
             return null;

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
+import org.irri.varipirusasyarakshna.model.MethdodsSource;
+
 public class ChidapuruguluMenuActivity extends AppCompatActivity {
 
     @Override
@@ -16,7 +18,45 @@ public class ChidapuruguluMenuActivity extends AppCompatActivity {
         findViewById(R.id.ll_sudi_tegulu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_name","sudi"));
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.SUDI_THEGULU));
+            }
+        });
+
+        findViewById(R.id.ll_thataku_thegulu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.THATAKU_THEGULU));
+            }
+        });
+        findViewById(R.id.ll_kampu_nalli).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.KAMPU_NALLI));
+            }
+        });
+        findViewById(R.id.ll_kandamu_tholuchu_pur).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.KANDAMU_THOLUCHU_PURUGU));
+            }
+        });
+
+        findViewById(R.id.ll_gottapu_rogamu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.GOTTAPU_ROGAM));
+            }
+        });
+        findViewById(R.id.ll_thella_rogamu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.THELLA_ROGAM));
+            }
+        });
+        findViewById(R.id.ll_aaku_nalli).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.AAKU_NALLI));
             }
         });
     }

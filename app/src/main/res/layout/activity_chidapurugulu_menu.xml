@@ -46,14 +46,12 @@
                 android:text="@string/label_sudi_tegulu"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
 
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
-                tools:layout_editor_absoluteY="111dp" />
+                />
 
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_menu_two"
+            android:id="@+id/ll_thataku_thegulu"
             style="@style/menuLinearlayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -81,7 +79,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_menu_three"
+            android:id="@+id/ll_kampu_nalli"
 
             style="@style/menuLinearlayoutStyle"
             android:layout_width="match_parent"
@@ -136,7 +134,7 @@
         <!--</LinearLayout>-->
 
         <LinearLayout
-            android:id="@+id/ll_menu_five"
+            android:id="@+id/ll_thella_rogamu"
 
 
             style="@style/menuLinearlayoutStyle"
@@ -164,7 +162,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_menu_six"
+            android:id="@+id/ll_gottapu_rogamu"
 
 
             style="@style/menuLinearlayoutStyle"
@@ -192,7 +190,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_menu_seven"
+            android:id="@+id/ll_kandamu_tholuchu_pur"
 
 
             style="@style/menuLinearlayoutStyle"
@@ -220,7 +218,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_menu_eight"
+            android:id="@+id/ll_aaku_nalli"
             style="@style/menuLinearlayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

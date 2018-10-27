@@ -61,6 +61,7 @@ public class HowToIdentifyFragment extends Fragment {
     //    int[] mSudiTheguluImageUrls ={R.drawable.img_aragya_panta,R.drawable.aragya_panta_r};
 //    String[] mSudiImageTitles = {"test","test2"};
     List<FindImage> mFindImages;
+
     Map<String, Integer> mSudimap = new LinkedHashMap() {{
         put("దోమ పోటు - తొలిదశ", R.drawable.sudi_1);
         put("దోమ పోటు తుదిదశ", R.drawable.sudi_2);
@@ -201,12 +202,16 @@ public class HowToIdentifyFragment extends Fragment {
         put("Image4", R.drawable.vedalpaku_4);
 
 
-
     }};
 
     Map<String, Integer> mNeeetiKalupuMap = new LinkedHashMap() {{
 //        put("Image1", R.drawable.vedal);
-
+        put("Image1", R.drawable.neeti_kalupu_1);
+        put("Image2", R.drawable.neeti_kalupu_2);
+        put("Image3", R.drawable.neeti_kalupu_3);
+        put("Image4", R.drawable.neeti_kalupu_4);
+        put("Image5" , R.drawable.neeti_kalupu_5);
+        put("Image6", R.drawable.neeti_kalupu_6);
 
     }};
 
@@ -321,19 +326,19 @@ public class HowToIdentifyFragment extends Fragment {
                     mHowToIdentStrRes = getString(R.string.natina_polamu_prop_methods);
                     prepareListFromMap(mNaruMudiMap);
                     break;
-                    case MethdodsSource.VOODA_KALUPU_MOKKA:
+                case MethdodsSource.VOODA_KALUPU_MOKKA:
                     mHowToIdentStrRes = getString(R.string.vooda_identify);
                     prepareListFromMap(mVoodaMap);
                     break;
-                    case MethdodsSource.THUNGA_JAATHI:
+                case MethdodsSource.THUNGA_JAATHI:
                     mHowToIdentStrRes = getString(R.string.thunga_identify);
                     prepareListFromMap(mThungaMap);
                     break;
-                    case MethdodsSource.VEDALPAKU_KALUPU:
+                case MethdodsSource.VEDALPAKU_KALUPU:
                     mHowToIdentStrRes = getString(R.string.vedalpaku_aaku_identify);
                     prepareListFromMap(mVedalpaku_aaku);
                     break;
-                    case MethdodsSource.NEETI_KALUPU:
+                case MethdodsSource.NEETI_KALUPU:
                     mHowToIdentStrRes = getString(R.string.neeti_kalupu_identify);
                     prepareListFromMap(mNeeetiKalupuMap);
                     break;
@@ -369,7 +374,7 @@ public class HowToIdentifyFragment extends Fragment {
         mRecyclerView = view.findViewById(R.id.rv_images);
         TextView mTvNavigateTab2 = view.findViewById(R.id.tv_navigate_tab2);
         mTvNavigateTab2.setPaintFlags(mTvNavigateTab2.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        if (mParam2!=null && mParam2.equals("PiruDasalu")){
+        if (mParam2 != null && mParam2.equals("PiruDasalu")) {
             mTvNavigateTab2.setVisibility(View.GONE);
         }
         mTvNavigateTab2.setOnClickListener(new View.OnClickListener() {

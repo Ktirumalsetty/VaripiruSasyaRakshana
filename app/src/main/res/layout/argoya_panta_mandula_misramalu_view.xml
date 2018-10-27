@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:text="వరి కలుపు మందులు అన్నియు, వరి పురుగు మందులు, వరి శిలీంద్ర నాశకాలతో కలిపి వాడవచ్చును."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:shrinkColumns="*">
+
+        <TableRow style="@style/TableRowStyle">
+
+            <!-- first element of the row-->
+            <TextView
+                android:id="@+id/simpleTextView"
+
+                style="@style/TableCellHeader"
+
+
+                android:text="క్రిమి సంహరక మందులు"
+
+                />
+
+            <TextView
+                android:id="@+id/header"
+                style="@style/TableCellHeader"
+                android:layout_weight="2"
+                android:text="శిలీంద్ర నాశక మందులు"
+
+                />
+
+        </TableRow>
+
+        <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="1. మోనోక్రోటోఫాస్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కార్బ్ండైజిమ్/ కాపర్ ఆక్సిక్లోరైడ్/ ఎడిఫెంఫాస్ కార్బ్ండైజిమ్ /జైరమ్/థైరమ్/కాప్టాన్" />
+
+        </TableRow>
+
+        <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="2. డైకోఫాల్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కాపర్ ఆక్సిక్లోరైడ్/ ఎడిఫెంఫాస్ మాంకోజెబ్/జైరమ్/థైరమ్/కాప్టాన్" />
+
+        </TableRow>
+
+        <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="3. క్లోర్ పైరిఫాస్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కార్బ్ండైజిమ్ / కాపర్ ఆక్సిక్లోరైడ్/ ఎడిఫెంఫాస్/కాప్టాన్" />
+
+        </TableRow>
+
+        <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="4. ప్రొఫినోఫాస్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="మాంకోజెబ్" />
+
+        </TableRow>
+
+        <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="5. క్వినాల్ ఫాస్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కార్బ్ండైజిమ్ / మాంకోజెబ్" />
+
+        </TableRow>
+
+        <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="6. అసిఫేట్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కార్బ్ండైజిమ్ / మాంకోజెబ్" />
+
+        </TableRow> <TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="7. డైక్లోరోవాస్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కార్బ్ండైజిమ్ / కాపర్ ఆక్సిక్లోరైడ్/ మాంకోజెబ్/ జైరమ్" />
+
+        </TableRow><TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="8. కార్బోఫ్యూరాన్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="కార్బ్ండైజిమ్ /థైరమ్/కాప్టాన్" />
+
+        </TableRow><TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="9. క్లోరాన్ర్టినిల్ ప్రొల్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="హెక్సకొనజోల్/ట్రైసైక్లజోల్/కాసుగామైసిన్ కార్బన్ డైజిమ్" />
+
+        </TableRow><TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="10. స్పైరోమెసిఫిన్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="ప్రొపికొనజోల్" />
+
+        </TableRow><TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="11. డైనొ ట్రోఫ్యురాన్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="హెక్సకొనజోల్" />
+
+        </TableRow><TableRow style="@style/TableRowStyle">
+            <!-- first element of the row-->
+            <TextView
+                style="@style/TableCellItemLeft"
+
+                android:text="12. డైకోఫాల్"
+
+                />
+
+            <TextView
+                style="@style/TableCellItemRight"
+
+                android:text="ప్రొపికొనజోల్" />
+
+        </TableRow>
+    </TableLayout>
+
+
+    <TextView
+        android:layout_margin="5dp"
+        android:textColor="@android:color/black"
+        android:text="సూచన: పైన తెలిపిన శిలీంద్ర నాశక మందులలో ఏదైనా ఒక్క దాన్ని మాత్రమే తీసుకొని వాటికి ఎదురుగా ఇవ్వబడిన క్రిమి సంహారక మందుతో కలుపుకొని స్ప్రే చేయవలెను."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>

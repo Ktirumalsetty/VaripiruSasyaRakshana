@@ -187,7 +187,7 @@ public class LakshanaluMediaStickyHeaderAdapter extends SelectableAdapter<Recycl
     void populateGeneralView(KanipincheLakshanaluItem driveItem,MyViewHolder holder,int position){
         ViewCompat.setTransitionName(holder.mImageView, "transition"+position);
         String mediaUrlDecoded = "";
-        holder.mImageView.setImageResource(driveItem.getImageResID());
+//        holder.mImageView.setImageResource(driveItem.getImageResID());
         Glide.with(mContext)
                 .load(driveItem.getImageResID())
                 .into(holder.mImageView);

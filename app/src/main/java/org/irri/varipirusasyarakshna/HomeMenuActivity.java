@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 
+import org.irri.varipirusasyarakshna.model.KanipincheLakshanaluItem;
+
 public class HomeMenuActivity extends AppCompatActivity {
 
     LinearLayout llChidaPurugulu,llThegullu,llVividhaDasalu,llArogyaPanta,llKalupuMokkalu,llLakshanalu;
@@ -54,6 +56,12 @@ public class HomeMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeMenuActivity.this,VividhaDasaluMenuActivity.class));
+            }
+        });
+        llLakshanalu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeMenuActivity.this,LakshanaluMenuActivity.class));
             }
         });
 

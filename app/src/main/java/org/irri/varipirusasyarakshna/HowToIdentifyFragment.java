@@ -210,8 +210,45 @@ public class HowToIdentifyFragment extends Fragment {
         put("Image2", R.drawable.neeti_kalupu_2);
         put("Image3", R.drawable.neeti_kalupu_3);
         put("Image4", R.drawable.neeti_kalupu_4);
-        put("Image5" , R.drawable.neeti_kalupu_5);
+        put("Image5", R.drawable.neeti_kalupu_5);
         put("Image6", R.drawable.neeti_kalupu_6);
+
+    }};
+
+    Map<String, Integer> mKankiNalliMap = new LinkedHashMap() {{
+        put("ఆకు తొడిమలో నల్లి", R.drawable.kanki_aaku_thodimalo_nalli_1);
+        put("నల్లి", R.drawable.kanki_nalli_2);
+        put("ఈనెల మీద ఎరుపు చార", R.drawable.kanki_enela_mida_erupu_chara_3);
+        put("మచ్చలు పడిన గింజలు", R.drawable.kandamu_tol_purugu_thella_kanki_4);
+
+    }};
+
+    Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
+        put("గొట్టాలలోవున్నపిల్ల పురుగు", R.drawable.gottapu_purugu_pilla_1);
+        put("తల్లి పురుగు", R.drawable.gottapu_purugu_thalli_2);
+        put("కత్తిరించినట్లున్న ఆకులు", R.drawable.gottapu_purugu_kathirinchi_nattu_aakulu_3);
+
+    }};
+
+
+    Map<String, Integer> mHordMaggetMap = new LinkedHashMap() {{
+        put("పురుగు సోకిన వరి మొక్కలు", R.drawable.hord_magget_purugu_sokina_1);
+        put("పిల్ల పురుగు", R.drawable.hord_magget_pilla_purugu_2);
+
+
+    }};
+    Map<String, Integer> mThamaraPuruguluMap = new LinkedHashMap() {{
+        put("తామర పురుగు సోకిన వరి", R.drawable.thamara_purugulu_thamara_purugu_sokina_vari_1);
+        put("తామర పురుగులు", R.drawable.thamara_purugulu_2);
+
+
+    }};
+
+    Map<String, Integer> mRelluRalchPuruguMap = new LinkedHashMap() {{
+        put("Image1", R.drawable.rellu_ralchu_purugu_1);
+        put("Image2", R.drawable.rellu_ralchu_purugu_2);
+        put("Image3", R.drawable.rellu_ralchu_purugu_3);
+
 
     }};
 
@@ -341,6 +378,26 @@ public class HowToIdentifyFragment extends Fragment {
                 case MethdodsSource.NEETI_KALUPU:
                     mHowToIdentStrRes = getString(R.string.neeti_kalupu_identify);
                     prepareListFromMap(mNeeetiKalupuMap);
+                    break;
+                case MethdodsSource.KANKI_NALLI:
+                    mHowToIdentStrRes = getString(R.string.kanki_nalli_identify);
+                    prepareListFromMap(mKankiNalliMap);
+                    break;
+                case MethdodsSource.GOTTAPU_PURUGU:
+                    mHowToIdentStrRes = getString(R.string.gottapu_purugu_identify);
+                    prepareListFromMap(mGottapuPuruguMap);
+                    break;
+                case MethdodsSource.HORD_MAGGET:
+                    mHowToIdentStrRes = getString(R.string.hord_magget_identify);
+                    prepareListFromMap(mHordMaggetMap);
+                    break;
+                case MethdodsSource.THAMARA_PURUGULU:
+                    mHowToIdentStrRes = getString(R.string.thamara_purugu_identify);
+                    prepareListFromMap(mThamaraPuruguluMap);
+                    break;
+                case MethdodsSource.RELLU_RALCHU_PURUGU:
+                    mHowToIdentStrRes = getString(R.string.rellu_ralchu_purugu_identify);
+                    prepareListFromMap(mRelluRalchPuruguMap);
                     break;
 
             }

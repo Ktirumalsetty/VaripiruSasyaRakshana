@@ -26,6 +26,7 @@ import org.irri.varipirusasyarakshna.model.ListItem;
 import org.irri.varipirusasyarakshna.model.MethdodsSource;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by KTirumalsetty on 10/30/2017.
@@ -34,10 +35,16 @@ import java.util.ArrayList;
 public class LakshanaluMediaStickyHeaderAdapter extends SelectableAdapter<RecyclerView.ViewHolder> {
 
     private static final String TAG = "LakshanaluMediaStickyHeaderAdapter";
-    private final ArrayList<ListItem> mDriveItems;
+//    private final ArrayList<ListItem> mDriveItems;
+    private final List<KanipincheLakshanaluItem> mDriveItems;
     private final Context mContext;
 //    ChatApplication mChatApplication;
-    public LakshanaluMediaStickyHeaderAdapter(Context context, ArrayList<ListItem> homeList) {
+//    public LakshanaluMediaStickyHeaderAdapter(Context context, ArrayList<ListItem> homeList) {
+//        this.mContext = context;
+//        this.mDriveItems = homeList;
+////        mChatApplication = (ChatApplication) ((Activity)context).getApplication();
+//    }
+    public LakshanaluMediaStickyHeaderAdapter(Context context, List<KanipincheLakshanaluItem> homeList) {
         this.mContext = context;
         this.mDriveItems = homeList;
 //        mChatApplication = (ChatApplication) ((Activity)context).getApplication();
@@ -67,51 +74,55 @@ public class LakshanaluMediaStickyHeaderAdapter extends SelectableAdapter<Recycl
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         RecyclerView.ViewHolder viewHolder = null;
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        switch (viewType) {
-
-            case ListItem.TYPE_GENERAL:
-                View v1 = inflater.inflate(R.layout.lakshanalu_media_list_item, parent,
-                        false);
+        View v1 = inflater.inflate(R.layout.lakshanalu_media_list_item, parent, false);
                 viewHolder = new MyViewHolder(v1);
-                break;
-
-            case ListItem.TYPE_IMAGE_CATEGORY:
-                View v2 = inflater.inflate(R.layout.lakshanalu_media_row_header, parent, false);
-                viewHolder = new DateViewHolder(v2);
-                break;
-        }
+//        switch (viewType) {
+//
+//            case ListItem.TYPE_GENERAL:
+//                View v1 = inflater.inflate(R.layout.lakshanalu_media_list_item, parent,
+//                        false);
+//                viewHolder = new MyViewHolder(v1);
+//                break;
+//
+//            case ListItem.TYPE_IMAGE_CATEGORY:
+//                View v2 = inflater.inflate(R.layout.lakshanalu_media_row_header, parent, false);
+//                viewHolder = new DateViewHolder(v2);
+//                break;
+//        }
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int position) {
-
-        switch (viewHolder.getItemViewType()) {
-
-            case ListItem.TYPE_GENERAL:
-
-                GeneralItem generalItem = (GeneralItem) mDriveItems.get(position);
-                MyViewHolder generalViewHolder = (MyViewHolder) viewHolder;
-                populateGeneralView(generalItem.getLakshanaluItem(),generalViewHolder,position);
-                break;
-
-            case ListItem.TYPE_IMAGE_CATEGORY:
-                ImageTypeItem dateItem
-                        = (ImageTypeItem) mDriveItems.get(position);
-                DateViewHolder dateViewHolder = (DateViewHolder) viewHolder;
-
-                // Populate date item data here
-                populateDateView(dateItem,dateViewHolder);
-                break;
-        }
+        KanipincheLakshanaluItem item = (KanipincheLakshanaluItem) mDriveItems.get(position);
+        MyViewHolder generalViewHolder = (MyViewHolder) viewHolder;
+        populateGeneralView(item,generalViewHolder,position);
+//        switch (viewHolder.getItemViewType()) {
+//
+//            case ListItem.TYPE_GENERAL:
+//
+//                GeneralItem generalItem = (GeneralItem) mDriveItems.get(position);
+//                MyViewHolder generalViewHolder = (MyViewHolder) viewHolder;
+//                populateGeneralView(generalItem.getLakshanaluItem(),generalViewHolder,position);
+//                break;
+//
+//            case ListItem.TYPE_IMAGE_CATEGORY:
+//                ImageTypeItem dateItem
+//                        = (ImageTypeItem) mDriveItems.get(position);
+//                DateViewHolder dateViewHolder = (DateViewHolder) viewHolder;
+//
+//                // Populate date item data here
+//                populateDateView(dateItem,dateViewHolder);
+//                break;
+//        }
 
 
     }
 
-    @Override
-    public int getItemViewType(int position) {
-        return mDriveItems.get(position).getType();
-    }
+//    @Override
+//    public int getItemViewType(int position) {
+//        return mDriveItems.get(position).getType();
+//    }
 
     @Override
     public int getItemCount() {

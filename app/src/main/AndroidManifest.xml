@@ -68,9 +68,13 @@
         <activity
             android:name=".ImageViewerActivity"
             android:label="@string/label_kanipinche_lakshanalu" />
-        <activity android:name=".TeamMembersActivity"
-            android:label="@string/label_team_members"
-            ></activity>
+        <activity
+            android:name=".TeamMembersActivity"
+            android:label="@string/label_team_members" />
+        <activity
+            android:name=".HomeDrawerActivity"
+            android:label="@string/title_activity_home_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

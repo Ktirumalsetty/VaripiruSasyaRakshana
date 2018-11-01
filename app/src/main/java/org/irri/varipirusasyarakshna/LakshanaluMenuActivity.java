@@ -14,6 +14,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -66,17 +67,53 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
         put("ఆకు ముడత ఆశించిన పొలము", R.drawable.kampu_purugu_hani_3);
 
     }};
+
     Map<String, Integer> mGottapuRogamuMap = new LinkedHashMap() {{
         put("గొట్టపు పురుగు", R.drawable.gottapu_rogam_gottapu_purugu_1);
         put("ఉల్లి కోడు", R.drawable.gottapu_rogam_vulli_kodu_2);
 
     }};
 
+Map<String, Integer> mKankiNalliMap = new LinkedHashMap() {{
+        put("ఆకు తొడిమలో నల్లి", R.drawable.kanki_aaku_thodimalo_nalli_1);
+        put("నల్లి", R.drawable.kanki_nalli_2);
+        put("ఈనెల మీద ఎరుపు చార", R.drawable.kanki_enela_mida_erupu_chara_3);
+        put("మచ్చలు పడిన గింజలు", R.drawable.kandamu_tol_purugu_thella_kanki_4);
+
+    }};
+
+Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
+        put("గొట్టాలలోవున్నపిల్ల పురుగు", R.drawable.gottapu_purugu_pilla_1);
+        put("తల్లి పురుగు", R.drawable.gottapu_purugu_thalli_2);
+        put("కత్తిరించినట్లున్న ఆకులు", R.drawable.gottapu_purugu_kathirinchi_nattu_aakulu_3);
+
+    }};
     Map<String, Integer> mKandamTholuchuPuruguMap = new LinkedHashMap() {{
         put("గ్రుడ్ల సముదాయము", R.drawable.kandamu_tol_purugu_gudla_samu_1);
         put("తల్లి పురుగు", R.drawable.kandamu_tol_purugu_talli_pur_2);
         put("చనిపోయిన మొవ్వులు", R.drawable.kandamu_tol_purugu_chani_movvalu_3);
         put("తెల్ల కంకి", R.drawable.kandamu_tol_purugu_thella_kanki_4);
+
+    }};
+
+    Map<String, Integer> mHordMaggetMap = new LinkedHashMap() {{
+        put("పురుగు సోకిన వరి మొక్కలు", R.drawable.hord_magget_purugu_sokina_1);
+        put("పిల్ల పురుగు", R.drawable.hord_magget_pilla_purugu_2);
+
+
+    }};
+    Map<String, Integer> mThamaraPuruguluMap = new LinkedHashMap() {{
+        put("తామర పురుగు సోకిన వరి", R.drawable.thamara_purugulu_thamara_purugu_sokina_vari_1);
+        put("తామర పురుగులు", R.drawable.thamara_purugulu_2);
+
+
+    }};
+
+    Map<String, Integer> mRelluRalchPuruguMap = new LinkedHashMap() {{
+        put("Image1", R.drawable.rellu_ralchu_purugu_1);
+        put("Image2", R.drawable.rellu_ralchu_purugu_2);
+        put("Image3", R.drawable.rellu_ralchu_purugu_3);
+
 
     }};
 
@@ -232,21 +269,21 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
                 case 7:
                     prepareListFromMap(mGottapuRogamuMap, MethdodsSource.GOTTAPU_ROGAM);
                     break;
-//                case 8:
-//                    prepareListFromMap(mKankiNalli, MethdodsSource.KANKI_NALLI);
-//                    break;
-//                case 9:
-//                    prepareListFromMap(mGottapuPurugu, MethdodsSource.GOTTAPU_PURUGU);
-//                    break;
-//                case 10:
-//                    prepareListFromMap(mHo, MethdodsSource.HORD_MAGGET);
-//                    break;
-//                case 11:
-//                    prepareListFromMap(, MethdodsSource.THAMARA_PURUGULU);
-//                    break;
-//                case 12:
-//                    prepareListFromMap(mHo, MethdodsSource.RELLU_RALCHU_PURUGU);
-//                    break;
+                case 8:
+                    prepareListFromMap(mKankiNalliMap, MethdodsSource.KANKI_NALLI);
+                    break;
+                case 9:
+                    prepareListFromMap(mGottapuPuruguMap, MethdodsSource.GOTTAPU_PURUGU);
+                    break;
+                case 10:
+                    prepareListFromMap(mHordMaggetMap, MethdodsSource.HORD_MAGGET);
+                    break;
+                case 11:
+                    prepareListFromMap(mThamaraPuruguluMap, MethdodsSource.THAMARA_PURUGULU);
+                    break;
+                case 12:
+                    prepareListFromMap(mRelluRalchPuruguMap, MethdodsSource.RELLU_RALCHU_PURUGU);
+                    break;
                 case 13:
                     prepareListFromMap(mAggiTheguluMap, MethdodsSource.AGGI_THEGULU);
                     break;
@@ -283,7 +320,7 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
             }
         }
 
-        mDriveItems = groupImagesByCategory(mKanipincheLakshanaluItems);
+//        mDriveItems = groupImagesByCategory(mKanipincheLakshanaluItems);
 
         populateData();
 
@@ -305,10 +342,10 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
         final int columnsCount = calculateNoOfColumns(this);
         Log.d(TAG, "columnsCount" + columnsCount);
 //        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, columnsCount);
-        mRecyclerView.setHasFixedSize(false);
+//        mRecyclerView.setHasFixedSize(false);
 
-        ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(this, R.dimen.item_offset);
-        mRecyclerView.addItemDecoration(itemDecoration);
+//        ItemOffsetDecoration itemDecoration = new ItemOffsetDecoration(this, R.dimen.item_offset);
+//        mRecyclerView.addItemDecoration(itemDecoration);
 
 //        RecyclerSectionItemDecoration sectionItemDecoration =
 //                new RecyclerSectionItemDecoration(getResources().getDimensionPixelSize(R.dimen.item_offset),
@@ -320,22 +357,22 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
 //        boolean includeEdge = false;
 //        mRecyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
         GridLayoutManager  mLayoutManager = new GridLayoutManager(this, columnsCount);
-        mLayoutManager.getSpanSizeLookup().setSpanIndexCacheEnabled(true);
-        mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-            @Override
-            public int getSpanSize(int position) {
-                switch(mAdapter.getItemViewType(position)){
-                    case ListItem.TYPE_GENERAL:
-                        return 1;
-
-                    case ListItem.TYPE_IMAGE_CATEGORY:
-                        return columnsCount;
-
-                    default:
-                        return columnsCount;
-                }
-            }
-        });
+//        mLayoutManager.getSpanSizeLookup().setSpanIndexCacheEnabled(true);
+//        mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+//            @Override
+//            public int getSpanSize(int position) {
+//                switch(mAdapter.getItemViewType(position)){
+//                    case ListItem.TYPE_GENERAL:
+//                        return columnsCount;
+//
+//                    case ListItem.TYPE_IMAGE_CATEGORY:
+//                        return columnsCount;
+//
+//                    default:
+//                        return columnsCount;
+//                }
+//            }
+//        });
 
         mRecyclerView.setLayoutManager(mLayoutManager);
 
@@ -344,33 +381,51 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
         mRecyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, mRecyclerView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                KanipincheLakshanaluItem driveItem = null;
-                String dateItemDate;
-                ListItem listItem = mDriveItems.get(position);
-                if (listItem.getType() == ListItem.TYPE_IMAGE_CATEGORY){
-                    return;
-                }else{
-                    GeneralItem generalItem = (GeneralItem) mDriveItems.get(position);
 
-                    // Populate general item data here
-                    driveItem = generalItem.getLakshanaluItem();
-                    try {
-                        Log.d(TAG, "on  click");
-                        LakshanaluMediaStickyHeaderAdapter.MyViewHolder holder = (LakshanaluMediaStickyHeaderAdapter.MyViewHolder) mRecyclerView.findViewHolderForAdapterPosition(position);
-                        Intent intent = new Intent(LakshanaluMenuActivity.this, ImageViewerActivity.class);
-                        intent.putExtra("DriveItemObj", driveItem);
-                        intent.putExtra("EXTRA_MEDIA_IMAGE_TRANSITION_NAME", ViewCompat.getTransitionName(holder.mImageView));
-                        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(LakshanaluMenuActivity.this,
-                                holder.mImageView,
-                                ViewCompat.getTransitionName(holder.mImageView));
+                KanipincheLakshanaluItem driveItem = mKanipincheLakshanaluItems.get(position);
+                try {
+                    Log.d(TAG, "on  click");
+                    LakshanaluMediaStickyHeaderAdapter.MyViewHolder holder = (LakshanaluMediaStickyHeaderAdapter.MyViewHolder) mRecyclerView.findViewHolderForAdapterPosition(position);
+                    Intent intent = new Intent(LakshanaluMenuActivity.this, ImageViewerActivity.class);
+                    intent.putExtra("DriveItemObj", driveItem);
+                    intent.putExtra("EXTRA_MEDIA_IMAGE_TRANSITION_NAME", ViewCompat.getTransitionName(holder.mImageView));
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(LakshanaluMenuActivity.this,
+                            holder.mImageView,
+                            ViewCompat.getTransitionName(holder.mImageView));
 
-                        startActivity(intent, options.toBundle());
+                    startActivity(intent, options.toBundle());
 
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
+
+//                KanipincheLakshanaluItem driveItem = null;
+//                String dateItemDate;
+//                ListItem listItem = mDriveItems.get(position);
+//                if (listItem.getType() == ListItem.TYPE_IMAGE_CATEGORY){
+//                    return;
+//                }else{
+//                    GeneralItem generalItem = (GeneralItem) mDriveItems.get(position);
+//
+//                    // Populate general item data here
+//                    driveItem = generalItem.getLakshanaluItem();
+//                    try {
+//                        Log.d(TAG, "on  click");
+//                        LakshanaluMediaStickyHeaderAdapter.MyViewHolder holder = (LakshanaluMediaStickyHeaderAdapter.MyViewHolder) mRecyclerView.findViewHolderForAdapterPosition(position);
+//                        Intent intent = new Intent(LakshanaluMenuActivity.this, ImageViewerActivity.class);
+//                        intent.putExtra("DriveItemObj", driveItem);
+//                        intent.putExtra("EXTRA_MEDIA_IMAGE_TRANSITION_NAME", ViewCompat.getTransitionName(holder.mImageView));
+//                        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(LakshanaluMenuActivity.this,
+//                                holder.mImageView,
+//                                ViewCompat.getTransitionName(holder.mImageView));
+//
+//                        startActivity(intent, options.toBundle());
+//
+//                    } catch (Exception e) {
+//                        e.printStackTrace();
+//                    }
+//
+//                }
 
 
             }
@@ -385,9 +440,9 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
             }
         }));
 
-        if (mDriveItems != null && mDriveItems.size() > 0) {
+        if (mKanipincheLakshanaluItems != null && mKanipincheLakshanaluItems.size() > 0) {
 //            mAdapter = new DriveMediaRecyclerAdapter(getActivity(), mDriveItems);
-            mAdapter = new LakshanaluMediaStickyHeaderAdapter(this, mDriveItems);
+            mAdapter = new LakshanaluMediaStickyHeaderAdapter(this, mKanipincheLakshanaluItems);
             mRecyclerView.setAdapter(mAdapter);
 //            runLayoutAnimation(mRecyclerView,R.anim.grid_layout_animation_from_bottom);
         }
@@ -441,12 +496,30 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_details, menu);
+        return true;
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
 
                 finish();
                 return true;
+
+            case R.id.action_home:
+
+                Intent i = new Intent(this, HomeDrawerActivity.class);
+                // Closing all the Activities
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+
+                finish();
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);

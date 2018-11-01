@@ -119,11 +119,28 @@ public class ProprietaryMethodsFragment extends Fragment {
                 case MethdodsSource.VOODA_KALUPU_MOKKA:
                     stringRes = getString(R.string.vooda_prop_methods);
                     break;
+                    case MethdodsSource.THUNGA_JAATHI:
+                    stringRes = getString(R.string.thunga_prop_methods);
+                    break;
                 case MethdodsSource.VEDALPAKU_KALUPU:
                     stringRes = getString(R.string.vedalpaku_aaku_kalupu_prop_methods);
                     break;
                 case MethdodsSource.NEETI_KALUPU:
                     stringRes = getString(R.string.neeti_kalupu_prop_methods);
+                    break;
+                case MethdodsSource.KANKI_NALLI:
+                    stringRes = getString(R.string.kanki_nalli_prop_methods);
+                case MethdodsSource.GOTTAPU_PURUGU:
+                    stringRes = getString(R.string.gottapu_purugu_prop_methods);
+                    break;
+                case MethdodsSource.HORD_MAGGET:
+                    stringRes = getString(R.string.hord_magget_prop_methods);
+                    break;
+                case MethdodsSource.THAMARA_PURUGULU:
+                    stringRes = getString(R.string.thamara_purugu_prop_methods);
+                    break;
+                case MethdodsSource.RELLU_RALCHU_PURUGU:
+                    stringRes = getString(R.string.rellu_ralchu_purugu_prop_methods);
                     break;
 
             }

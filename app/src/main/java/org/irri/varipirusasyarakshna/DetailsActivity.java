@@ -1,5 +1,6 @@
 package org.irri.varipirusasyarakshna;
 
+import android.content.Intent;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -135,17 +136,32 @@ public class DetailsActivity extends AppCompatActivity {
             case MethdodsSource.NEETI_KALUPU:
                 toolbar.setTitle(R.string.label_neti_kalupu);
                 break;
+            case MethdodsSource.KANKI_NALLI:
+                toolbar.setTitle(R.string.label_kanki_nalli);
+                break;
+            case MethdodsSource.GOTTAPU_PURUGU:
+                toolbar.setTitle(R.string.label_gottapu_purugu);
+                break;
+            case MethdodsSource.HORD_MAGGET:
+                toolbar.setTitle(R.string.label_hord_magget);
+                break;
+            case MethdodsSource.THAMARA_PURUGULU:
+                toolbar.setTitle(R.string.label_thamara_purugulu);
+                break;
+            case MethdodsSource.RELLU_RALCHU_PURUGU:
+                toolbar.setTitle(R.string.label_rellu_ralchu);
+                break;
 
         }
     }
 
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        getMenuInflater().inflate(R.menu.menu_details, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_details, menu);
+        return true;
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -154,6 +170,17 @@ public class DetailsActivity extends AppCompatActivity {
 
                 finish();
                 return true;
+
+            case R.id.action_home:
+
+                Intent i = new Intent(this, HomeDrawerActivity.class);
+                // Closing all the Activities
+                i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(i);
+
+                finish();
+                return true;
+
 
             default:
                 return super.onOptionsItemSelected(item);

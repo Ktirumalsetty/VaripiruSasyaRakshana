@@ -29,7 +29,6 @@ public class HomeMenuActivity extends AppCompatActivity {
         llArogyaPanta = findViewById(R.id.ll_arogya_panta);
         llKalupuMokkalu = findViewById(R.id.ll_kalupu_mokkalu);
         llLakshanalu = findViewById(R.id.ll_kanipinche_lakshanalu);
-        btnTeam = findViewById(R.id.btn_Team);
 
         llChidaPurugulu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,12 +64,12 @@ public class HomeMenuActivity extends AppCompatActivity {
             }
         });
 
-        btnTeam.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(HomeMenuActivity.this,TeamMembersActivity.class));
-            }
-        });
+//        btnTeam.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(HomeMenuActivity.this,TeamMembersActivity.class));
+//            }
+//        });
 
 
 

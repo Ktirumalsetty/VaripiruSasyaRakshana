@@ -8,6 +8,7 @@
         android:layout_height="match_parent">
 
         <TextView
+            android:textSize="16sp"
             android:layout_margin="5dp"
             android:textColor="@android:color/black"
             android:text="వరి కలుపు మందులు అన్నియు, వరి పురుగు మందులు, వరి శిలీంద్ర నాశకాలతో కలిపి వాడవచ్చును."
@@ -15,6 +16,8 @@
             android:layout_height="wrap_content" />
 
     <TableLayout
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#ffffff"
@@ -225,7 +228,18 @@
     </TableLayout>
 
 
+        <TextView
+
+            android:textSize="16sp"
+            android:justificationMode="inter_word"
+            android:layout_margin="5dp"
+            android:textColor="@android:color/black"
+            android:text="సూచన:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     <TextView
+        android:textSize="16sp"
+        android:justificationMode="inter_word"
         android:layout_margin="5dp"
         android:textColor="@android:color/black"
         android:text="సూచన: పైన తెలిపిన శిలీంద్ర నాశక మందులలో ఏదైనా ఒక్క దాన్ని మాత్రమే తీసుకొని వాటికి ఎదురుగా ఇవ్వబడిన క్రిమి సంహారక మందుతో కలుపుకొని స్ప్రే చేయవలెను."

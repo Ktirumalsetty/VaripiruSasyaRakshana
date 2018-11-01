@@ -125,42 +125,6 @@
             <android.support.v7.widget.CardView style="@style/DashBoardCardView">
 
                 <LinearLayout
-                    android:id="@+id/ll_vividha_dasalu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:orientation="vertical">
-
-                    <org.irri.varipirusasyarakshna.RoundishImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:src="@drawable/menu_piru_vividha_dasalu_r"
-                        app:cornerRadius="@dimen/round_corner_radius"
-                        app:roundedCorners="topLeft|topRight" />
-
-                    <TextView
-                        style="@style/DasgBoardLabel"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="@string/label_vividha_dasalu"
-                        android:textColor="@android:color/black" />
-                </LinearLayout>
-
-            </android.support.v7.widget.CardView>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_three"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/ll_two"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal">
-
-            <android.support.v7.widget.CardView style="@style/DashBoardCardView">
-                <LinearLayout
                     android:id="@+id/ll_kanipinche_lakshanalu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -183,6 +147,42 @@
                         android:textColor="@android:color/black" />
 
 
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_two"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView style="@style/DashBoardCardView">
+                <LinearLayout
+                    android:id="@+id/ll_vividha_dasalu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <org.irri.varipirusasyarakshna.RoundishImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/menu_piru_vividha_dasalu_r"
+                        app:cornerRadius="@dimen/round_corner_radius"
+                        app:roundedCorners="topLeft|topRight" />
+
+                    <TextView
+                        style="@style/DasgBoardLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/label_vividha_dasalu"
+                        android:textColor="@android:color/black" />
                 </LinearLayout>
 
             </android.support.v7.widget.CardView>

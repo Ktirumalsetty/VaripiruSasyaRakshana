@@ -32,4 +32,7 @@ public class MethdodsSource {
     public static final int ANKURAMU_NUNDI = 26;
     public static final int AAROGYAMINA_PANTA = 27;
     public static final int VOODA_KALUPU_MOKKA = 28;
+
+    public static final int AROGYA_PANTA_DOS_DONTS = 50;
+    public static final int AROGYA_PANTA_SARINA_MANDULU = 51;
 }

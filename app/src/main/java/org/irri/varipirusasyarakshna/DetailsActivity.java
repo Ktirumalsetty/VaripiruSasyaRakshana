@@ -1,6 +1,7 @@
 package org.irri.varipirusasyarakshna;
 
 import android.content.Intent;
+import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -18,6 +19,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.RelativeLayout;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
 import org.irri.varipirusasyarakshna.model.MethdodsSource;
@@ -39,6 +42,9 @@ public class DetailsActivity extends AppCompatActivity {
      * The {@link ViewPager} that will host the section contents.
      */
     private ViewPager mViewPager;
+    private TabItem mTabItem1;
+    private TabItem mTabItem2;
+    private TabLayout mTabLayout;
 
     int mDetailPageType;
     Toolbar toolbar;
@@ -57,9 +63,13 @@ public class DetailsActivity extends AppCompatActivity {
         // primary sections of the activity.
         mDetailPageType = getIntent().getIntExtra("detail_page_type", -1);
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
+        mViewPager = (ViewPager) findViewById(R.id.container);
+        mTabLayout = (TabLayout) findViewById(R.id.tabs);
+        mTabItem1 = (TabItem) findViewById(R.id.tabItem);
+        mTabItem2 = (TabItem) findViewById(R.id.tabItem2);
         setPageTitle();
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -150,6 +160,15 @@ public class DetailsActivity extends AppCompatActivity {
                 break;
             case MethdodsSource.RELLU_RALCHU_PURUGU:
                 toolbar.setTitle(R.string.label_rellu_ralchu);
+                break;
+            case MethdodsSource.GADDI_JATHULU:
+                toolbar.setTitle(R.string.label_gaddi_jathulu);
+                break;
+            case MethdodsSource.AROGYA_PANTA_DOS_DONTS:
+                toolbar.setTitle(R.string.label_dos_donts);
+                mTabLayout.getTabAt(0).setText(getString(R.string.label_dos));
+                mTabLayout.getTabAt(1).setText(getString(R.string.label_donts));
+
                 break;
 
         }

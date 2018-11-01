@@ -69,6 +69,12 @@ public class HomeDrawerActivity extends AppCompatActivity
                 startActivity(new Intent(HomeDrawerActivity.this,LakshanaluMenuActivity.class));
             }
         });
+        llArogyaPanta.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeDrawerActivity.this,ArogyaPantaMenuActivity.class));
+            }
+        });
 
 
 
@@ -135,7 +141,7 @@ public class HomeDrawerActivity extends AppCompatActivity
             startActivity(new Intent(this,TeamMembersActivity.class).putExtra("MenuName","TeamMembers"));
 //        } else if (id == R.id.nav_mulam) {
 //            startActivity(new Intent(this,TeamMembersActivity.class).putExtra("MenuName","Mulam"));
-//        } else if (id == R.id.nav_mundu_mata) {
+        } else if (id == R.id.nav_mundu_mata) {
             startActivity(new Intent(this,TeamMembersActivity.class).putExtra("MenuName","Mundu_Mata"));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

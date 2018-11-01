@@ -74,7 +74,13 @@
         <activity
             android:name=".HomeDrawerActivity"
             android:label="@string/title_activity_home_drawer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ArogyaPantaMenuActivity"
+            android:label="@string/label_arogya_panta" />
+        <activity
+            android:name=".SarinaMandulaMisramaluActivity"
+            android:label="@string/label_sarina_mandula_misramalu"></activity>
     </application>
 
 </manifest>

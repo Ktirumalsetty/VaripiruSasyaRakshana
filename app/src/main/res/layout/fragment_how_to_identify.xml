@@ -41,6 +41,7 @@
          <!--/>-->
 
     <TextView
+
         android:layout_marginLeft="5dp"
         android:textColor="@android:color/holo_blue_light"
         style="@style/Base.Widget.AppCompat.Toolbar.Button.Navigation"

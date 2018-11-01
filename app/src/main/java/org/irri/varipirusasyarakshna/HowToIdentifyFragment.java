@@ -56,6 +56,7 @@ public class HowToIdentifyFragment extends Fragment {
     WebView mWebView;
     ImageView mImageViewOne;
     RecyclerView mRecyclerView;
+    TextView mTvNavTab2;
     String mHowToIdentStrRes;
 
     //    int[] mSudiTheguluImageUrls ={R.drawable.img_aragya_panta,R.drawable.aragya_panta_r};
@@ -86,9 +87,9 @@ public class HowToIdentifyFragment extends Fragment {
     }};
 
     Map<String, Integer> mThellaRogamuMap = new LinkedHashMap() {{
-        put("రెక్కల పురుగు", R.drawable.kampu_pilla_purugu_1);
-        put("పిల్ల పురుగు", R.drawable.kampu_pedda_2);
-        put("ఆకు ముడత ఆశించిన పొలము", R.drawable.kampu_purugu_hani_3);
+        put("రెక్కల పురుగు", R.drawable.thella_rogam_rekkala_purugu_1);
+        put("పిల్ల పురుగు", R.drawable.thella_rogam_pilla_purugu_2);
+        put("ఆకు ముడత ఆశించిన పొలము", R.drawable.thella_rogam_aaku_mudatha_asainchina_polam_3);
 
     }};
     Map<String, Integer> mGottapuRogamuMap = new LinkedHashMap() {{
@@ -252,6 +253,13 @@ public class HowToIdentifyFragment extends Fragment {
 
     }};
 
+    Map<String, Integer> mGaddiJathuluMap = new LinkedHashMap() {{
+        put("Image1", R.drawable.gaddi_jathulu_1);
+        put("Image2", R.drawable.gaddi_jathulu_2);
+
+
+    }};
+
 
     public HowToIdentifyFragment() {
         // Required empty public constructor
@@ -399,6 +407,16 @@ public class HowToIdentifyFragment extends Fragment {
                     mHowToIdentStrRes = getString(R.string.rellu_ralchu_purugu_identify);
                     prepareListFromMap(mRelluRalchPuruguMap);
                     break;
+                case MethdodsSource.GADDI_JATHULU:
+                    mHowToIdentStrRes = getString(R.string.gaddi_jathulu_identify);
+                    prepareListFromMap(mGaddiJathuluMap);
+                    break;
+                case MethdodsSource.AROGYA_PANTA_DOS_DONTS:
+                    mHowToIdentStrRes = getString(R.string.aarogyamina_panta_dos);
+//                    mTvNavTab2.setText(R.string.label_donts);
+//                    prepareListFromMap(mRelluRalchPuruguMap);
+                    break;
+
 
             }
 //            if (mParam1.equals("sudi")){
@@ -429,10 +447,14 @@ public class HowToIdentifyFragment extends Fragment {
         mWebView = view.findViewById(R.id.webview);
 //        mImageViewOne = view.findViewById(R.id.image1);
         mRecyclerView = view.findViewById(R.id.rv_images);
+        mTvNavTab2 = view.findViewById(R.id.tv_navigate_tab2);
         TextView mTvNavigateTab2 = view.findViewById(R.id.tv_navigate_tab2);
         mTvNavigateTab2.setPaintFlags(mTvNavigateTab2.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
-        if (mParam2 != null && mParam2.equals("PiruDasalu")) {
+        if (mParam2 != null && mParam2.equals("PiruDasalu") | mParam2 != null && mParam2.equals("AROGYA_PANTA_SARINA_MANDULU")) {
             mTvNavigateTab2.setVisibility(View.GONE);
+        }
+        if (mParam1 == MethdodsSource.AROGYA_PANTA_DOS_DONTS) {
+            mTvNavigateTab2.setText(R.string.label_donts);
         }
         mTvNavigateTab2.setOnClickListener(new View.OnClickListener() {
             @Override

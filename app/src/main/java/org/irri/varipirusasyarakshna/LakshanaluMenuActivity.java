@@ -62,9 +62,9 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
     }};
 
     Map<String, Integer> mThellaRogamuMap = new LinkedHashMap() {{
-        put("రెక్కల పురుగు", R.drawable.kampu_pilla_purugu_1);
-        put("పిల్ల పురుగు", R.drawable.kampu_pedda_2);
-        put("ఆకు ముడత ఆశించిన పొలము", R.drawable.kampu_purugu_hani_3);
+        put("రెక్కల పురుగు", R.drawable.thella_rogam_rekkala_purugu_1);
+        put("పిల్ల పురుగు", R.drawable.thella_rogam_pilla_purugu_2);
+        put("ఆకు ముడత ఆశించిన పొలము", R.drawable.thella_rogam_aaku_mudatha_asainchina_polam_3);
 
     }};
 
@@ -227,6 +227,13 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
 
     }};
 
+    Map<String, Integer> mGaddiJathuluMap = new LinkedHashMap() {{
+        put("Image1", R.drawable.gaddi_jathulu_1);
+        put("Image2", R.drawable.gaddi_jathulu_2);
+
+
+    }};
+
     List<KanipincheLakshanaluItem> mKanipincheLakshanaluItems = new ArrayList<>();
     private LinkedHashMap<Integer,List<KanipincheLakshanaluItem>> mItemsMap;
 
@@ -305,9 +312,9 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
                 case 19:
                     prepareListFromMap(mTungroMap, MethdodsSource.TUNGRO_VIRUS_THEGULU);
                     break;
-//                case 20:
-//                    prepareListFromMap(mGa, MethdodsSource.GADDI_JATHULU);
-//                    break;
+                case 20:
+                    prepareListFromMap(mGaddiJathuluMap, MethdodsSource.GADDI_JATHULU);
+                    break;
                 case 21:
                     prepareListFromMap(mThungaMap, MethdodsSource.THUNGA_JAATHI);
                     break;

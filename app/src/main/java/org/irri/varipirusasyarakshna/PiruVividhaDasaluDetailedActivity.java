@@ -13,6 +13,7 @@ public class PiruVividhaDasaluDetailedActivity extends AppCompatActivity {
 
     int mDetailPageType;
     Toolbar toolbar;
+    HowToIdentifyFragment fragment;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,8 +33,13 @@ public class PiruVividhaDasaluDetailedActivity extends AppCompatActivity {
                 return;
             }
 
+            if (mDetailPageType == MethdodsSource.AROGYA_PANTA_SARINA_MANDULU){
+                fragment =  HowToIdentifyFragment.newInstance(mDetailPageType,"PiruDasalu");
+            }else{
+                fragment =  HowToIdentifyFragment.newInstance(mDetailPageType,"AROGYA_PANTA_SARINA_MANDULU");
+            }
             // Create a new Fragment to be placed in the activity layout
-            HowToIdentifyFragment fragment =  HowToIdentifyFragment.newInstance(mDetailPageType,"PiruDasalu");
+
 
             // In case this activity was started with special instructions from an
             // Intent, pass the Intent's extras to the fragment as arguments
@@ -102,6 +108,9 @@ public class PiruVividhaDasaluDetailedActivity extends AppCompatActivity {
                 break;
                 case MethdodsSource.NAATINA_POLAMU:
                 toolbar.setTitle(R.string.label_natina_polam);
+                break;
+                case MethdodsSource.AROGYA_PANTA_SARINA_MANDULU:
+                toolbar.setTitle(R.string.label_sarina_mandula_misramalu);
                 break;
 
         }

@@ -52,6 +52,7 @@
     </style>
 
     <style name="TableCellHeader">
+        <item name="android:textSize">16sp</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@android:color/white</item>
@@ -64,6 +65,7 @@
     </style>
 
     <style name="TableCellItemLeft">
+        <item name="android:textSize">16sp</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@android:color/white</item>
@@ -76,6 +78,7 @@
     </style>
 
     <style name="TableCellItemRight">
+        <item name="android:textSize">16sp</item>
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@android:color/white</item>

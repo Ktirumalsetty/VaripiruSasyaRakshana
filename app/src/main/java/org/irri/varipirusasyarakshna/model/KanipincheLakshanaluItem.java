@@ -15,7 +15,7 @@ public class KanipincheLakshanaluItem implements Serializable {
     }
 
     public String getImageName() {
-        return imageName;
+        return removeLastOcc(imageName);
     }
 
     public void setImageName(String imageName) {
@@ -36,5 +36,16 @@ public class KanipincheLakshanaluItem implements Serializable {
 
     public void setItemType(int itemType) {
         this.itemType = itemType;
+    }
+
+    private String removeLastOcc(String imagName){
+        String result;
+       int lastOccPos = imagName.lastIndexOf("_");
+       if (lastOccPos != -1){
+           result = imagName.substring(0,lastOccPos);
+       }else{
+           result = imagName;
+       }
+       return  result;
     }
 }

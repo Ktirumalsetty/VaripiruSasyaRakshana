@@ -110,9 +110,9 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
     }};
 
     Map<String, Integer> mRelluRalchPuruguMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.rellu_ralchu_purugu_1);
-        put("Image2", R.drawable.rellu_ralchu_purugu_2);
-        put("Image3", R.drawable.rellu_ralchu_purugu_3);
+        put("రెల్లురాల్చు పురుగు_1", R.drawable.rellu_ralchu_purugu_1);
+        put("రెల్లురాల్చు పురుగు_2", R.drawable.rellu_ralchu_purugu_2);
+        put("రెల్లురాల్చు పురుగు_3", R.drawable.rellu_ralchu_purugu_3);
 
 
     }};
@@ -123,113 +123,113 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
     }};
 
     Map<String, Integer> mAggiTheguluMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.aggi_tegulu_1);
-        put("Image2", R.drawable.aggi_tegulu_2);
-        put("Image3", R.drawable.aggi_tegulu_3);
-        put("Image4", R.drawable.aggi_tegulu_4);
+        put("అగ్గి తెగులు_1", R.drawable.aggi_tegulu_1);
+        put("అగ్గి తెగులు_2", R.drawable.aggi_tegulu_2);
+        put("అగ్గి తెగులు_3", R.drawable.aggi_tegulu_3);
+        put("అగ్గి తెగులు_4", R.drawable.aggi_tegulu_4);
 
     }};
 
     Map<String, Integer> mPaamuPodaMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.paamu_poda_thegulu_1);
-        put("Image2", R.drawable.paamu_poda_thegulu_2);
-        put("Image3", R.drawable.paamu_poda_thegulu_3);
-        put("Image4", R.drawable.paamu_poda_thegulu_4);
-        put("Image5", R.drawable.paamu_poda_thegulu_5);
+        put("పాముపొడ తెగులు_1", R.drawable.paamu_poda_thegulu_1);
+        put("పాముపొడ తెగులు_2", R.drawable.paamu_poda_thegulu_2);
+        put("పాముపొడ తెగులు_3", R.drawable.paamu_poda_thegulu_3);
+        put("పాముపొడ తెగులు_4", R.drawable.paamu_poda_thegulu_4);
+        put("పాముపొడ తెగులు_5", R.drawable.paamu_poda_thegulu_5);
 
     }};
 
     Map<String, Integer> mGodhumaRanguMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.godhuma_rangu_1);
+        put("గోధుమ రంగు ఆకుమచ్చ తెగులు", R.drawable.godhuma_rangu_1);
 
     }};
 
     Map<String, Integer> mPottaKulluMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.potta_kullu_1);
-        put("Image2", R.drawable.potta_kullu_2);
-        put("Image3", R.drawable.potta_kullu_3);
+        put("పొట్ట కుళ్ళు తెగులు_1", R.drawable.potta_kullu_1);
+        put("పొట్ట కుళ్ళు తెగులు_2", R.drawable.potta_kullu_2);
+        put("పొట్ట కుళ్ళు తెగులు_3", R.drawable.potta_kullu_3);
 
 
     }};
 
     Map<String, Integer> mManiPanduMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.mani_pandu_1);
-        put("Image2", R.drawable.mani_pandu_2);
-        put("Image3", R.drawable.mani_pandu_3);
+        put("మానిపండు తెగులు_1", R.drawable.mani_pandu_1);
+        put("మానిపండు తెగులు_2 ", R.drawable.mani_pandu_2);
+        put("మానిపండు తెగులు_3", R.drawable.mani_pandu_3);
 
     }};
     Map<String, Integer> mBacteriaAakuMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.bacteria_aaku_endu_1);
-        put("Image2", R.drawable.bacteria_aaku_endu_2);
-        put("Image3", R.drawable.bacteria_aaku_endu_3);
-        put("Image4", R.drawable.bacteria_aaku_endu_4);
+        put("బాక్టీరియా ఆకు ఎండు తెగులు_1", R.drawable.bacteria_aaku_endu_1);
+        put("బాక్టీరియా ఆకు ఎండు తెగులు_2", R.drawable.bacteria_aaku_endu_2);
+        put("బాక్టీరియా ఆకు ఎండు తెగులు_3", R.drawable.bacteria_aaku_endu_3);
+        put("బాక్టీరియా ఆకు ఎండు తెగులు_4", R.drawable.bacteria_aaku_endu_4);
 
     }};
     Map<String, Integer> mTungroMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.tungro_1);
-        put("Image2", R.drawable.tungro_2);
-        put("Image3", R.drawable.tungro_3);
+        put("టుంగ్రోవైరస్ తెగులు_1", R.drawable.tungro_1);
+        put("టుంగ్రోవైరస్ తెగులు_2", R.drawable.tungro_2);
+        put("టుంగ్రోవైరస్ తెగులు_3", R.drawable.tungro_3);
 
     }};
 
     Map<String, Integer> mNaruMudiMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.naru_mudi_1);
+        put("నారు మడి", R.drawable.naru_mudi_1);
 
     }};
 
     Map<String, Integer> mPilakaDasaMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.pilaka_dasa_1);
-        put("Image2", R.drawable.pilaka_dasa_2);
-        put("Image3", R.drawable.pilaka_dasa_3);
+        put("పిలక దశ_1", R.drawable.pilaka_dasa_1);
+        put("పిలక దశ_2", R.drawable.pilaka_dasa_2);
+        put("పిలక దశ_3", R.drawable.pilaka_dasa_3);
 
     }};
     Map<String, Integer> mAnkuramuNundiMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.ankuramu_nundi_1);
+        put("అంకురము నుండి", R.drawable.ankuramu_nundi_1);
 
     }};
     Map<String, Integer> mNatinaPolamuMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.natina_polamu_1);
-        put("Image2", R.drawable.natina_polamu_2);
-        put("Image3", R.drawable.natina_polamu_3);
-        put("Image4", R.drawable.natina_polamu_4);
+        put("నాటిన పొలము_1", R.drawable.natina_polamu_1);
+        put("నాటిన పొలము_2", R.drawable.natina_polamu_2);
+        put("నాటిన పొలము_3", R.drawable.natina_polamu_3);
+        put("నాటిన పొలము_4", R.drawable.natina_polamu_4);
 
     }};
 
     Map<String, Integer> mVoodaMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.vooda_1);
-        put("Image2", R.drawable.vooda_2);
+        put("ఊద_1", R.drawable.vooda_1);
+        put("ఊద_2", R.drawable.vooda_2);
 
     }};
 
     Map<String, Integer> mThungaMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.thunga_jathi_1);
+        put("తుంగ", R.drawable.thunga_jathi_1);
 
 
     }};
 
     Map<String, Integer> mVedalpaku_aaku = new LinkedHashMap() {{
-        put("Image1", R.drawable.vedalpaku_1);
-        put("Image2", R.drawable.vedalpaku_2);
-        put("Image3", R.drawable.vedalpaku_3);
-        put("Image4", R.drawable.vedalpaku_4);
+        put("వెడల్పాకు కలుపు_1", R.drawable.vedalpaku_1);
+        put("వెడల్పాకు కలుపు_2", R.drawable.vedalpaku_2);
+        put("వెడల్పాకు కలుపు_3", R.drawable.vedalpaku_3);
+        put("వెడల్పాకు కలుపు_4", R.drawable.vedalpaku_4);
 
 
     }};
 
     Map<String, Integer> mNeeetiKalupuMap = new LinkedHashMap() {{
 //        put("Image1", R.drawable.vedal);
-        put("Image1", R.drawable.neeti_kalupu_1);
-        put("Image2", R.drawable.neeti_kalupu_2);
-        put("Image3", R.drawable.neeti_kalupu_3);
-        put("Image4", R.drawable.neeti_kalupu_4);
-        put("Image5", R.drawable.neeti_kalupu_5);
-        put("Image6", R.drawable.neeti_kalupu_6);
+        put("నీటి కలుపు_1", R.drawable.neeti_kalupu_1);
+        put("నీటి కలుపు_2", R.drawable.neeti_kalupu_2);
+        put("నీటి కలుపు_3", R.drawable.neeti_kalupu_3);
+        put("నీటి కలుపు_4", R.drawable.neeti_kalupu_4);
+        put("నీటి కలుపు_5", R.drawable.neeti_kalupu_5);
+        put("నీటి కలుపు_6", R.drawable.neeti_kalupu_6);
 
     }};
 
     Map<String, Integer> mGaddiJathuluMap = new LinkedHashMap() {{
-        put("Image1", R.drawable.gaddi_jathulu_1);
-        put("Image2", R.drawable.gaddi_jathulu_2);
+        put("గడ్డి జాతులు_1", R.drawable.gaddi_jathulu_1);
+        put("గడ్డి జాతులు_2", R.drawable.gaddi_jathulu_2);
 
 
     }};

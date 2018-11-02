@@ -8,7 +8,7 @@
 
     <android.support.v7.widget.Toolbar
         app:titleTextColor="@android:color/white"
-        app:title="@string/app_name"
+        app:title="@string/app_title"
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"

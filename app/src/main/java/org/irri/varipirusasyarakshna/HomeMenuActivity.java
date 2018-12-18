@@ -12,7 +12,7 @@ import org.irri.varipirusasyarakshna.model.KanipincheLakshanaluItem;
 
 public class HomeMenuActivity extends AppCompatActivity {
 
-    LinearLayout llChidaPurugulu,llThegullu,llVividhaDasalu,llArogyaPanta,llKalupuMokkalu,llLakshanalu;
+    LinearLayout llChidaPurugulu,llThegullu,llVividhaDasalu,llKalupuMokkalu,llLakshanalu,llPoshakaLopalu;
     private Button btnTeam;
 
     @Override
@@ -26,9 +26,10 @@ public class HomeMenuActivity extends AppCompatActivity {
         llChidaPurugulu = findViewById(R.id.ll_chida_purugulu);
         llThegullu = findViewById(R.id.ll_tegullu);
         llVividhaDasalu = findViewById(R.id.ll_vividha_dasalu);
-        llArogyaPanta = findViewById(R.id.ll_arogya_panta);
+//        llArogyaPanta = findViewById(R.id.ll_arogya_panta);
         llKalupuMokkalu = findViewById(R.id.ll_kalupu_mokkalu);
         llLakshanalu = findViewById(R.id.ll_kanipinche_lakshanalu);
+        llPoshakaLopalu = findViewById(R.id.ll_poshaka_lopalu);
 
         llChidaPurugulu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +62,12 @@ public class HomeMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(HomeMenuActivity.this,LakshanaluMenuActivity.class));
+            }
+        });
+        llPoshakaLopalu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeMenuActivity.this,PoshakaLopaluMenuActivity.class));
             }
         });
 

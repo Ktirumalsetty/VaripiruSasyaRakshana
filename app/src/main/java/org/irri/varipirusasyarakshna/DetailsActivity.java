@@ -164,6 +164,15 @@ public class DetailsActivity extends AppCompatActivity {
             case MethdodsSource.GADDI_JATHULU:
                 toolbar.setTitle(R.string.label_gaddi_jathulu);
                 break;
+            case MethdodsSource.BAKANE_THEGULU:
+                toolbar.setTitle(R.string.label_bakane_thegulu);
+                break;
+            case MethdodsSource.KANDAMU_KULLU_THEGULU:
+                toolbar.setTitle(R.string.label_kandam_kullu_tegulu);
+                break;
+            case MethdodsSource.VARIGINJA_MARPU_THEGULU:
+                toolbar.setTitle(R.string.label_variginja_marpu_tegulu);
+                break;
             case MethdodsSource.AROGYA_PANTA_DOS_DONTS:
                 toolbar.setTitle(R.string.label_dos_donts);
                 mTabLayout.getTabAt(0).setText(getString(R.string.label_dos));

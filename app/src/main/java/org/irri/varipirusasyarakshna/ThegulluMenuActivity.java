@@ -59,6 +59,24 @@ public class ThegulluMenuActivity extends AppCompatActivity {
                 startActivity(new Intent(ThegulluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.TUNGRO_VIRUS_THEGULU));
             }
         });
+        findViewById(R.id.ll_bakane_tegulu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ThegulluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.BAKANE_THEGULU));
+            }
+        });
+        findViewById(R.id.ll_kandam_kullu_tegulu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ThegulluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.KANDAMU_KULLU_THEGULU));
+            }
+        });
+        findViewById(R.id.ll_varigija_tegulu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ThegulluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.VARIGINJA_MARPU_THEGULU));
+            }
+        });
     }
 
     @Override

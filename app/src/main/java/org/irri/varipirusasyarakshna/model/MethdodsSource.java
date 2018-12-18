@@ -35,4 +35,7 @@ public class MethdodsSource {
 
     public static final int AROGYA_PANTA_DOS_DONTS = 50;
     public static final int AROGYA_PANTA_SARINA_MANDULU = 51;
+    public static final int BAKANE_THEGULU = 53;
+    public static final int  KANDAMU_KULLU_THEGULU = 54;
+    public static final int VARIGINJA_MARPU_THEGULU = 55;
 }

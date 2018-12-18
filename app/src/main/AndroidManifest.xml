@@ -80,7 +80,10 @@
             android:label="@string/label_arogya_panta" />
         <activity
             android:name=".SarinaMandulaMisramaluActivity"
-            android:label="@string/label_sarina_mandula_misramalu"></activity>
+            android:label="@string/label_sarina_mandula_misramalu" />
+        <activity android:name=".PoshakaLopaluMenuActivity"
+            android:label="@string/label_poshaka_lopalu"
+            ></activity>
     </application>
 
 </manifest>

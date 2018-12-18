@@ -60,6 +60,33 @@ public class ChidapuruguluMenuActivity extends AppCompatActivity {
                 startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.AAKU_NALLI));
             }
         });
+        findViewById(R.id.ll_rellu_ralchu_purugu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.RELLU_RALCHU_PURUGU));
+            }
+        });
+
+        findViewById(R.id.ll_gottapu_purugu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.GOTTAPU_PURUGU));
+            }
+        });
+
+        findViewById(R.id.ll_horl_magget).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.HORD_MAGGET));
+            }
+        });
+        findViewById(R.id.ll_thamara_purugu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ChidapuruguluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.THAMARA_PURUGULU));
+            }
+        });
+
     }
 
     @Override

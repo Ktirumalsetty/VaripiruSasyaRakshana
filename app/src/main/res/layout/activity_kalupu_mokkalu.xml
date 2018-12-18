@@ -33,7 +33,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/menu_vooda"
+                app:srcCompat="@drawable/img_menu_gaddi_jathi"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -62,7 +62,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/menu_thunga"
+                app:srcCompat="@drawable/img_menu_thunga_jathi"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView

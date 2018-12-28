@@ -203,7 +203,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/img_menu_horl_magget"
+                app:srcCompat="@drawable/img_menu_horl_maget_r"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -231,7 +231,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/img_menu_tamara_purugu"
+                app:srcCompat="@drawable/img_menu_tamara_purugulu_r"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView
@@ -259,7 +259,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:srcCompat="@drawable/img_menu_rellu_ralchu_purugu"
+                app:srcCompat="@drawable/img_menu_rellu_ralchu_purugu_r"
                 tools:layout_editor_absoluteY="16dp" />
 
             <TextView

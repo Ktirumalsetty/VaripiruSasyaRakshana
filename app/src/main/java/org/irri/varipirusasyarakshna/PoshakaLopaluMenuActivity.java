@@ -20,45 +20,45 @@ public class PoshakaLopaluMenuActivity extends AppCompatActivity {
         findViewById(R.id.ll_natrajani_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.SUDI_THEGULU));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.NATRAJANI_LOPAM));
             }
         });
 
         findViewById(R.id.ll_bhaswaram_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.THATAKU_THEGULU));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.BHASWARAM_LOPAM));
             }
         });
         findViewById(R.id.ll_potassium_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.KAMPU_NALLI));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.POTASSIUM_LOPAM));
             }
         });
         findViewById(R.id.ll_gandhakam_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.KANDAMU_THOLUCHU_PURUGU));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.GANDHAKAM_LOPAM));
             }
         });
 
         findViewById(R.id.ll_zink_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.GOTTAPU_ROGAM));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.ZYNC_LOPAM));
             }
         });
         findViewById(R.id.ll_inumu_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.THELLA_ROGAM));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.INUMU_LOPAM));
             }
         });
         findViewById(R.id.ll_choudu_lopam).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.AAKU_NALLI));
+                startActivity(new Intent(PoshakaLopaluMenuActivity.this,DetailsActivity.class).putExtra("detail_page_type",MethdodsSource.CHOWDU_NELALU_LOPAM));
             }
         });
 

@@ -30,17 +30,20 @@
                 app:roundedCorners="topLeft|topRight" />
 
             <TextView
-                android:ellipsize="end"
-                android:maxLines="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:ellipsize="marquee"
                 android:id="@+id/tv_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
 
-                android:text="Image name"
+                android:text="Image name hajhahf fhsfdhsd fsdfhsdf hf"
                 android:textAllCaps="true"
                 android:textColor="@android:color/black"
-                style="@style/HowToFindImageLabel" />
+                style="@style/HowToFindImageLabel"
+                android:singleLine="true" />
 
 
         </LinearLayout>

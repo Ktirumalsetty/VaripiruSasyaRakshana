@@ -148,6 +148,36 @@ public class ProprietaryMethodsFragment extends Fragment {
                 case MethdodsSource.AROGYA_PANTA_DOS_DONTS:
                     stringRes = getString(R.string.aarogyamina_panta_donts);
                     break;
+                case MethdodsSource.BAKANE_THEGULU:
+                    stringRes = getString(R.string.bakane_thegulu_prop_methods);
+                    break;
+                case MethdodsSource.KANDAMU_KULLU_THEGULU:
+                    stringRes = getString(R.string.kandam_kullu_thegulu_prop_methods);
+                    break;
+                case MethdodsSource.VARIGINJA_MARPU_THEGULU:
+                    stringRes = getString(R.string.variginja__marpu_thegulu_prop_methods);
+                    break;
+                case MethdodsSource.NATRAJANI_LOPAM:
+                    stringRes = getString(R.string.natrajani_lopam_prop_methods);
+                    break;
+                case MethdodsSource.BHASWARAM_LOPAM:
+                    stringRes = getString(R.string.bhaswara_lopam_prop_methods);
+                    break;
+                case MethdodsSource.POTASSIUM_LOPAM:
+                    stringRes = getString(R.string.potassium_lopam_prop_methods);
+                    break;
+                case MethdodsSource.GANDHAKAM_LOPAM:
+                    stringRes = getString(R.string.gandhakam_lopam_prop_methods);
+                    break;
+                case MethdodsSource.ZYNC_LOPAM:
+                    stringRes = getString(R.string.zync_lopam_prop_methods);
+                    break;
+                case MethdodsSource.INUMU_LOPAM:
+                    stringRes = getString(R.string.inumu_lopam_prop_methods);
+                    break;
+                case MethdodsSource.CHOWDU_NELALU_LOPAM:
+                    stringRes = getString(R.string.chowdu_nelalu_prop_methods);
+                    break;
 
             }
 

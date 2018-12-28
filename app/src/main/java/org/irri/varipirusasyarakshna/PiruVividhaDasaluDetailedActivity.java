@@ -14,6 +14,7 @@ public class PiruVividhaDasaluDetailedActivity extends AppCompatActivity {
     int mDetailPageType;
     Toolbar toolbar;
     HowToIdentifyFragment fragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +34,10 @@ public class PiruVividhaDasaluDetailedActivity extends AppCompatActivity {
                 return;
             }
 
-            if (mDetailPageType == MethdodsSource.AROGYA_PANTA_SARINA_MANDULU){
-                fragment =  HowToIdentifyFragment.newInstance(mDetailPageType,"PiruDasalu");
-            }else{
-                fragment =  HowToIdentifyFragment.newInstance(mDetailPageType,"AROGYA_PANTA_SARINA_MANDULU");
+            if (mDetailPageType == MethdodsSource.AROGYA_PANTA_SARINA_MANDULU) {
+                fragment = HowToIdentifyFragment.newInstance(mDetailPageType, "PiruDasalu");
+            } else {
+                fragment = HowToIdentifyFragment.newInstance(mDetailPageType, "AROGYA_PANTA_SARINA_MANDULU");
             }
             // Create a new Fragment to be placed in the activity layout
 
@@ -100,17 +101,47 @@ public class PiruVividhaDasaluDetailedActivity extends AppCompatActivity {
             case MethdodsSource.NAARU_MADI:
                 toolbar.setTitle(R.string.label_naru_madi);
                 break;
-                case MethdodsSource.PILAKA_DASA:
+            case MethdodsSource.PILAKA_DASA:
                 toolbar.setTitle(R.string.label_pilaka_dasa);
                 break;
-                case MethdodsSource.ANKURAMU_NUNDI:
+            case MethdodsSource.ANKURAMU_NUNDI:
                 toolbar.setTitle(R.string.label_ankuramu_nundi);
                 break;
-                case MethdodsSource.NAATINA_POLAMU:
+            case MethdodsSource.NAATINA_POLAMU:
                 toolbar.setTitle(R.string.label_natina_polam);
                 break;
-                case MethdodsSource.AROGYA_PANTA_SARINA_MANDULU:
+            case MethdodsSource.AROGYA_PANTA_SARINA_MANDULU:
                 toolbar.setTitle(R.string.label_sarina_mandula_misramalu);
+                break;
+            case MethdodsSource.BAKANE_THEGULU:
+                toolbar.setTitle(R.string.label_bakane_thegulu);
+                break;
+            case MethdodsSource.KANDAMU_KULLU_THEGULU:
+                toolbar.setTitle(R.string.label_kandam_kullu_tegulu);
+                break;
+            case MethdodsSource.VARIGINJA_MARPU_THEGULU:
+                toolbar.setTitle(R.string.label_variginja_marpu_tegulu);
+                break;
+            case MethdodsSource.NATRAJANI_LOPAM:
+                toolbar.setTitle(R.string.label_natrajani_lopam);
+                break;
+            case MethdodsSource.BHASWARAM_LOPAM:
+                toolbar.setTitle(R.string.label_bhaswaram_lopam);
+                break;
+            case MethdodsSource.POTASSIUM_LOPAM:
+                toolbar.setTitle(R.string.label_potassium_lopam);
+                break;
+            case MethdodsSource.GANDHAKAM_LOPAM:
+                toolbar.setTitle(R.string.label_gandhakam_lopam);
+                break;
+            case MethdodsSource.ZYNC_LOPAM:
+                toolbar.setTitle(R.string.label_zink_lopam);
+                break;
+            case MethdodsSource.INUMU_LOPAM:
+                toolbar.setTitle(R.string.label_inumu_lopam);
+                break;
+            case MethdodsSource.CHOWDU_NELALU_LOPAM:
+                toolbar.setTitle(R.string.label_choudu_lopam);
                 break;
 
         }

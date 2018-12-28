@@ -1,7 +1,5 @@
 package org.irri.varipirusasyarakshna;
 
-import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 
@@ -9,7 +7,6 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
@@ -25,8 +22,6 @@ import org.irri.varipirusasyarakshna.model.KanipincheLakshanaluItem;
 import org.irri.varipirusasyarakshna.model.ListItem;
 import org.irri.varipirusasyarakshna.model.MethdodsSource;
 import org.irri.varipirusasyarakshna.utils.ClickListener;
-import org.irri.varipirusasyarakshna.utils.GridSpacingItemDecoration;
-import org.irri.varipirusasyarakshna.utils.ItemOffsetDecoration;
 import org.irri.varipirusasyarakshna.utils.RecyclerTouchListener;
 
 import java.util.ArrayList;
@@ -74,7 +69,7 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
 
     }};
 
-Map<String, Integer> mKankiNalliMap = new LinkedHashMap() {{
+    Map<String, Integer> mKankiNalliMap = new LinkedHashMap() {{
         put("ఆకు తొడిమలో నల్లి", R.drawable.kanki_aaku_thodimalo_nalli_1);
         put("నల్లి", R.drawable.kanki_nalli_2);
         put("ఈనెల మీద ఎరుపు చార", R.drawable.kanki_enela_mida_erupu_chara_3);
@@ -82,7 +77,7 @@ Map<String, Integer> mKankiNalliMap = new LinkedHashMap() {{
 
     }};
 
-Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
+    Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
         put("గొట్టాలలోవున్నపిల్ల పురుగు", R.drawable.gottapu_purugu_pilla_1);
         put("తల్లి పురుగు", R.drawable.gottapu_purugu_thalli_2);
         put("కత్తిరించినట్లున్న ఆకులు", R.drawable.gottapu_purugu_kathirinchi_nattu_aakulu_3);
@@ -123,19 +118,19 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
     }};
 
     Map<String, Integer> mAggiTheguluMap = new LinkedHashMap() {{
-        put("అగ్గి తెగులు_1", R.drawable.aggi_tegulu_1);
-        put("అగ్గి తెగులు_2", R.drawable.aggi_tegulu_2);
-        put("అగ్గి తెగులు_3", R.drawable.aggi_tegulu_3);
-        put("అగ్గి తెగులు_4", R.drawable.aggi_tegulu_4);
+        put("ఆకుల మీద అగ్గి తెగులు", R.drawable.aggi_tegulu_1);
+        put("అగ్గి తెగులు ఆశించిన పొలము", R.drawable.aggi_tegulu_2);
+        put("కణుపుల మీద అగ్గి తెగులు", R.drawable.aggi_tegulu_3);
+        put("మెడవిరుపు తెగులు", R.drawable.aggi_tegulu_4);
 
     }};
 
     Map<String, Integer> mPaamuPodaMap = new LinkedHashMap() {{
-        put("పాముపొడ తెగులు_1", R.drawable.paamu_poda_thegulu_1);
-        put("పాముపొడ తెగులు_2", R.drawable.paamu_poda_thegulu_2);
-        put("పాముపొడ తెగులు_3", R.drawable.paamu_poda_thegulu_3);
-        put("పాముపొడ తెగులు_4", R.drawable.paamu_poda_thegulu_4);
-        put("పాముపొడ తెగులు_5", R.drawable.paamu_poda_thegulu_5);
+        put("మట్టలపై పాముపొడ తెగులు", R.drawable.paamu_poda_thegulu_1);
+        put("ఆకు మీద పాముపొడ తెగులు మరియు స్ల్కిరోషియా", R.drawable.paamu_poda_thegulu_2);
+        put("పాముపొడ తెగులు ఆశించిన పొలము", R.drawable.paamu_poda_thegulu_3);
+        put("ఆకు మీద పాముపొడ తెగులు", R.drawable.paamu_poda_thegulu_4);
+        put("కంకి మీద పాముపొడ తెగులు", R.drawable.paamu_poda_thegulu_5);
 
     }};
 
@@ -145,30 +140,30 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
     }};
 
     Map<String, Integer> mPottaKulluMap = new LinkedHashMap() {{
-        put("పొట్ట కుళ్ళు తెగులు_1", R.drawable.potta_kullu_1);
-        put("పొట్ట కుళ్ళు తెగులు_2", R.drawable.potta_kullu_2);
-        put("పొట్ట కుళ్ళు తెగులు_3", R.drawable.potta_kullu_3);
+        put("పొట్టకుళ్ళు తెగులు వలన పాక్షికంగా బయటకు వచ్చిన కంకి", R.drawable.potta_kullu_1);
+        put("పోటాకు పై పొట్టకుళ్ళు తెగులు", R.drawable.potta_kullu_2);
+//        put("పొట్ట కుళ్ళు తెగులు_3", R.drawable.potta_kullu_3);
 
 
     }};
 
     Map<String, Integer> mManiPanduMap = new LinkedHashMap() {{
-        put("మానిపండు తెగులు_1", R.drawable.mani_pandu_1);
-        put("మానిపండు తెగులు_2 ", R.drawable.mani_pandu_2);
-        put("మానిపండు తెగులు_3", R.drawable.mani_pandu_3);
+        put("మానిపండు తెగులు ఆశించిన కంకి", R.drawable.mani_pandu_1);
+        put("కంకిపై పసుపు రంగు శిలీంద్రపు ముద్ద ", R.drawable.mani_pandu_2);
+        put("కంకిపై నలుపు రంగు శిలీంద్రపు ముద్ద", R.drawable.mani_pandu_3);
 
     }};
     Map<String, Integer> mBacteriaAakuMap = new LinkedHashMap() {{
-        put("బాక్టీరియా ఆకు ఎండు తెగులు_1", R.drawable.bacteria_aaku_endu_1);
-        put("బాక్టీరియా ఆకు ఎండు తెగులు_2", R.drawable.bacteria_aaku_endu_2);
-        put("బాక్టీరియా ఆకు ఎండు తెగులు_3", R.drawable.bacteria_aaku_endu_3);
-        put("బాక్టీరియా ఆకు ఎండు తెగులు_4", R.drawable.bacteria_aaku_endu_4);
+        put("ఆకుమీద ఎండు తెగులు", R.drawable.bacteria_aaku_endu_1);
+        put("ఆకు ఎండు తెగులు ద్వారా స్రవించిన బాక్టీరియా కణ సముదాయం", R.drawable.bacteria_aaku_endu_2);
+        put("ఆకు ఎండు తెగులు సోకిన పొలం", R.drawable.bacteria_aaku_endu_3);
+        put("క్రెసెక్\u200Cదశ", R.drawable.bacteria_aaku_endu_4);
 
     }};
     Map<String, Integer> mTungroMap = new LinkedHashMap() {{
-        put("టుంగ్రోవైరస్ తెగులు_1", R.drawable.tungro_1);
-        put("టుంగ్రోవైరస్ తెగులు_2", R.drawable.tungro_2);
-        put("టుంగ్రోవైరస్ తెగులు_3", R.drawable.tungro_3);
+        put("టుంగ్రోవైరస్ సోకిన ఆకులు", R.drawable.tungro_1);
+        put("పచ్చదీపపు పురుగులు", R.drawable.tungro_2);
+        put("టటుంగ్రోవైరస్ సోకిన పొలం", R.drawable.tungro_3);
 
     }};
 
@@ -178,13 +173,13 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
     }};
 
     Map<String, Integer> mPilakaDasaMap = new LinkedHashMap() {{
-        put("పిలక దశ_1", R.drawable.pilaka_dasa_1);
-        put("పిలక దశ_2", R.drawable.pilaka_dasa_2);
-        put("పిలక దశ_3", R.drawable.pilaka_dasa_3);
+        put("పిలక దశ", R.drawable.pilaka_dasa_1);
+        put("పత్ర హరిత పటం", R.drawable.pilaka_dasa_2);
+        put("క్రిమిసంహారక మందులు", R.drawable.pilaka_dasa_3);
 
     }};
     Map<String, Integer> mAnkuramuNundiMap = new LinkedHashMap() {{
-        put("అంకురము నుండి", R.drawable.ankuramu_nundi_1);
+        put("అంకురము నుండి పూత దశ", R.drawable.ankuramu_nundi_1);
 
     }};
     Map<String, Integer> mNatinaPolamuMap = new LinkedHashMap() {{
@@ -195,47 +190,107 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
 
     }};
 
+    //    Map<String, Integer> mGaddiJathuluMap = new LinkedHashMap() {{
+//        put("గడ్డి జాతులు_1", R.drawable.gaddi_jathulu_1);
+//        put("గడ్డి జాతులు_2", R.drawable.gaddi_jathulu_2);
+//
+//
+//    }};
+
     Map<String, Integer> mVoodaMap = new LinkedHashMap() {{
-        put("ఊద_1", R.drawable.vooda_1);
-        put("ఊద_2", R.drawable.vooda_2);
+        put("బొంత ఊద", R.drawable.vooda_1);
+        put("ఊద", R.drawable.vooda_2);
+        put("ఉర్రంకి గడ్డి", R.drawable.vooda_3);
+        put("గడ్డి మొక్క", R.drawable.vooda_4);
 
     }};
 
+
     Map<String, Integer> mThungaMap = new LinkedHashMap() {{
-        put("తుంగ", R.drawable.thunga_jathi_1);
+        put("బ్రహ్మ తుంగ", R.drawable.thunga_jathi_1);
+        put("తుంగ", R.drawable.thunga_jathi_2);
+        put("రాకాసి తుంగ", R.drawable.thunga_jathi_3);
+        put("అల్లి తుంగ", R.drawable.thunga_jathi_4);
 
 
     }};
 
     Map<String, Integer> mVedalpaku_aaku = new LinkedHashMap() {{
-        put("వెడల్పాకు కలుపు_1", R.drawable.vedalpaku_1);
-        put("వెడల్పాకు కలుపు_2", R.drawable.vedalpaku_2);
-        put("వెడల్పాకు కలుపు_3", R.drawable.vedalpaku_3);
-        put("వెడల్పాకు కలుపు_4", R.drawable.vedalpaku_4);
+        put("గుంటకలగర", R.drawable.vedalpaku_1);
+        put("పిల్లి అడుగు", R.drawable.vedalpaku_2);
+        put("అమృత కాడ", R.drawable.vedalpaku_3);
+        put("అగ్నివేండ్రపాకు", R.drawable.vedalpaku_4);
 
 
     }};
 
     Map<String, Integer> mNeeetiKalupuMap = new LinkedHashMap() {{
 //        put("Image1", R.drawable.vedal);
-        put("నీటి కలుపు_1", R.drawable.neeti_kalupu_1);
-        put("నీటి కలుపు_2", R.drawable.neeti_kalupu_2);
-        put("నీటి కలుపు_3", R.drawable.neeti_kalupu_3);
-        put("నీటి కలుపు_4", R.drawable.neeti_kalupu_4);
-        put("నీటి కలుపు_5", R.drawable.neeti_kalupu_5);
-        put("నీటి కలుపు_6", R.drawable.neeti_kalupu_6);
+        put("కలువ", R.drawable.neeti_kalupu_1);
+        put("అంతర తామర", R.drawable.neeti_kalupu_2);
+        put("హైడ్రిల్లా", R.drawable.neeti_kalupu_3);
+        put("అజొల్లా", R.drawable.neeti_kalupu_4);
+        put("పసరాకు", R.drawable.neeti_kalupu_5);
+        put("నీటి తామర", R.drawable.neeti_kalupu_6);
 
     }};
 
-    Map<String, Integer> mGaddiJathuluMap = new LinkedHashMap() {{
-        put("గడ్డి జాతులు_1", R.drawable.gaddi_jathulu_1);
-        put("గడ్డి జాతులు_2", R.drawable.gaddi_jathulu_2);
+
+
+    Map<String, Integer> mBakaneMap = new LinkedHashMap() {{
+        put("బకానే తెగులు సోకిన పొలం", R.drawable.img_menu_bakane_tegulu);
+
+
+    }};
+    Map<String, Integer> mKandamKulluTheguluMap = new LinkedHashMap() {{
+        put("కాండం కుళ్ళు తెగులు", R.drawable.img_menu_kandam_kullu_tegulu);
+
+
+    }};
+    Map<String, Integer> mVariginjaRanguMarpuTheguluMap = new LinkedHashMap() {{
+        put("గింజ రంగు మార్పు తెగులు", R.drawable.img_menu_variginja_marpu_tegulu);
+
+
+    }};
+
+    Map<String, Integer> mNatrajaniMap = new LinkedHashMap() {{
+        put("నత్రజని లోపం", R.drawable.img_menu_natrajani_lopam);
+
+
+    }};
+    Map<String, Integer> mBhaswaramMap = new LinkedHashMap() {{
+        put("భాస్వరం లోప లక్షణాలు", R.drawable.img_menu_bhaswaram_lopam);
+
+
+    }};
+    Map<String, Integer> mPotassiumMap = new LinkedHashMap() {{
+        put("పొటాషియం లోపం", R.drawable.img_menu_potassium_lopam);
+
+
+    }};
+    Map<String, Integer> mGandhakamMap = new LinkedHashMap() {{
+        put("గంధకం లోప లక్షణాలు", R.drawable.img_menu_gandhakam_lopam);
+
+
+    }};
+    Map<String, Integer> mZyncMap = new LinkedHashMap() {{
+        put("జింకు లోప లక్షణాలు", R.drawable.img_menu_zink_lopam);
+
+
+    }};
+    Map<String, Integer> mInumuMap = new LinkedHashMap() {{
+        put("ఇనుము లోప లక్షణాలు", R.drawable.img_menu_inumu_lopam);
+
+
+    }};
+    Map<String, Integer> mChowduMap = new LinkedHashMap() {{
+        put("వరి పంటపై చౌడు ప్రభావం", R.drawable.img_menu_choudu_nelalu_lopam);
 
 
     }};
 
     List<KanipincheLakshanaluItem> mKanipincheLakshanaluItems = new ArrayList<>();
-    private LinkedHashMap<Integer,List<KanipincheLakshanaluItem>> mItemsMap;
+    private LinkedHashMap<Integer, List<KanipincheLakshanaluItem>> mItemsMap;
 
     RecyclerView mRecyclerView;
     private ArrayList<ListItem> mDriveItems;
@@ -253,7 +308,7 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
         mRecyclerView = findViewById(R.id.recycler_view);
 
 
-        for (int i = 1; i <= 23; i++) {
+        for (int i = 1; i <= 33; i++) {
             switch (i) {
                 case 1:
                     prepareListFromMap(mSudimap, MethdodsSource.SUDI_THEGULU);
@@ -310,19 +365,49 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
                     prepareListFromMap(mBacteriaAakuMap, MethdodsSource.BACTERIA_AAKU_ENDU_THEGULU);
                     break;
                 case 19:
-                    prepareListFromMap(mTungroMap, MethdodsSource.TUNGRO_VIRUS_THEGULU);
+                    prepareListFromMap(mBakaneMap, MethdodsSource.BAKANE_THEGULU);
                     break;
                 case 20:
-                    prepareListFromMap(mGaddiJathuluMap, MethdodsSource.GADDI_JATHULU);
+                    prepareListFromMap(mKandamKulluTheguluMap, MethdodsSource.KANDAMU_KULLU_THEGULU);
                     break;
                 case 21:
-                    prepareListFromMap(mThungaMap, MethdodsSource.THUNGA_JAATHI);
+                    prepareListFromMap(mVariginjaRanguMarpuTheguluMap, MethdodsSource.VARIGINJA_MARPU_THEGULU);
                     break;
                 case 22:
-                    prepareListFromMap(mVedalpaku_aaku, MethdodsSource.VEDALPAKU_KALUPU);
+                    prepareListFromMap(mTungroMap, MethdodsSource.TUNGRO_VIRUS_THEGULU);
                     break;
                 case 23:
+                    prepareListFromMap(mVoodaMap, MethdodsSource.GADDI_JATHULU);
+                    break;
+                case 24:
+                    prepareListFromMap(mThungaMap, MethdodsSource.THUNGA_JAATHI);
+                    break;
+                case 25:
+                    prepareListFromMap(mVedalpaku_aaku, MethdodsSource.VEDALPAKU_KALUPU);
+                    break;
+                case 26:
                     prepareListFromMap(mNeeetiKalupuMap, MethdodsSource.NEETI_KALUPU);
+                    break;
+                case 27:
+                    prepareListFromMap(mNatrajaniMap, MethdodsSource.NATRAJANI_LOPAM);
+                    break;
+                case 28:
+                    prepareListFromMap(mBhaswaramMap, MethdodsSource.BHASWARAM_LOPAM);
+                    break;
+                case 29:
+                    prepareListFromMap(mPotassiumMap, MethdodsSource.POTASSIUM_LOPAM);
+                    break;
+                case 30:
+                    prepareListFromMap(mGandhakamMap, MethdodsSource.GANDHAKAM_LOPAM);
+                    break;
+                case 31:
+                    prepareListFromMap(mZyncMap, MethdodsSource.ZYNC_LOPAM);
+                    break;
+                case 32:
+                    prepareListFromMap(mInumuMap, MethdodsSource.INUMU_LOPAM);
+                    break;
+                case 33:
+                    prepareListFromMap(mChowduMap, MethdodsSource.CHOWDU_NELALU_LOPAM);
                     break;
             }
         }
@@ -333,7 +418,8 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
 
     }
 
-    /** used to calculate the displayMetrics of the screen
+    /**
+     * used to calculate the displayMetrics of the screen
      *
      * @param context
      * @return
@@ -363,7 +449,7 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
 //        int spacing = 10; // 50px
 //        boolean includeEdge = false;
 //        mRecyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
-        GridLayoutManager  mLayoutManager = new GridLayoutManager(this, columnsCount);
+        GridLayoutManager mLayoutManager = new GridLayoutManager(this, columnsCount);
 //        mLayoutManager.getSpanSizeLookup().setSpanIndexCacheEnabled(true);
 //        mLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
 //            @Override
@@ -454,8 +540,7 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
 //            runLayoutAnimation(mRecyclerView,R.anim.grid_layout_animation_from_bottom);
         }
 
-        }
-
+    }
 
 
     private void prepareListFromMap(Map<String, Integer> map, int type) {
@@ -466,13 +551,13 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
         }
     }
 
-    private ArrayList<ListItem> groupImagesByCategory(List<KanipincheLakshanaluItem> mKanipincheLakshanaluItems){
+    private ArrayList<ListItem> groupImagesByCategory(List<KanipincheLakshanaluItem> mKanipincheLakshanaluItems) {
 
         mItemsMap = new LinkedHashMap<Integer, List<KanipincheLakshanaluItem>>();
-        if (mItemsMap!=null)
-            for(KanipincheLakshanaluItem item :mKanipincheLakshanaluItems){
-                Integer hashMapKey= item.getItemType();
-                if(mItemsMap.containsKey(hashMapKey)) {
+        if (mItemsMap != null)
+            for (KanipincheLakshanaluItem item : mKanipincheLakshanaluItems) {
+                Integer hashMapKey = item.getItemType();
+                if (mItemsMap.containsKey(hashMapKey)) {
                     // The key is already in the HashMap; add the pojo object
                     // against the existing key.
                     mItemsMap.get(hashMapKey).add(item);
@@ -486,7 +571,7 @@ Map<String, Integer> mGottapuPuruguMap = new LinkedHashMap() {{
         //Converting the HashMap data into a sorted list
         ArrayList<ListItem> consolidatedList = new ArrayList<>();
 
-        for (Integer key:mItemsMap.keySet()){
+        for (Integer key : mItemsMap.keySet()) {
             ImageTypeItem imageTypeItem = new ImageTypeItem();
             imageTypeItem.setItemType(key);
 

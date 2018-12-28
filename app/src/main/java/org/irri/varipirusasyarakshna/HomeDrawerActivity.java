@@ -151,6 +151,8 @@ public class HomeDrawerActivity extends AppCompatActivity
 //            startActivity(new Intent(this,TeamMembersActivity.class).putExtra("MenuName","Mulam"));
         } else if (id == R.id.nav_mundu_mata) {
             startActivity(new Intent(this,TeamMembersActivity.class).putExtra("MenuName","Mundu_Mata"));
+        } else if (id == R.id.arogyamina_panta) {
+            startActivity(new Intent(this,ArogyaPantaMenuActivity.class));
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

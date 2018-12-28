@@ -60,8 +60,9 @@ public class ImageViewerActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                supportFinishAfterTransition();
 
-                finish();
+//                finish();
                 return true;
 
             case R.id.action_home:

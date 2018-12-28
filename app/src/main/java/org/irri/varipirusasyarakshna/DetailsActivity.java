@@ -179,6 +179,27 @@ public class DetailsActivity extends AppCompatActivity {
                 mTabLayout.getTabAt(1).setText(getString(R.string.label_donts));
 
                 break;
+            case MethdodsSource.NATRAJANI_LOPAM:
+                toolbar.setTitle(R.string.label_natrajani_lopam);
+                break;
+            case MethdodsSource.BHASWARAM_LOPAM:
+                toolbar.setTitle(R.string.label_bhaswaram_lopam);
+                break;
+            case MethdodsSource.POTASSIUM_LOPAM:
+                toolbar.setTitle(R.string.label_potassium_lopam);
+                break;
+            case MethdodsSource.GANDHAKAM_LOPAM:
+                toolbar.setTitle(R.string.label_gandhakam_lopam);
+                break;
+            case MethdodsSource.ZYNC_LOPAM:
+                toolbar.setTitle(R.string.label_zink_lopam);
+                break;
+            case MethdodsSource.INUMU_LOPAM:
+                toolbar.setTitle(R.string.label_inumu_lopam);
+                break;
+            case MethdodsSource.CHOWDU_NELALU_LOPAM:
+                toolbar.setTitle(R.string.label_choudu_lopam);
+                break;
 
         }
     }

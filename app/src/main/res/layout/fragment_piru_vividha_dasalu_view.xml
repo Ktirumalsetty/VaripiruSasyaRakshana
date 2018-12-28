@@ -1,0 +1,94 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="org.irri.varipirusasyarakshna.HowToIdentifyFragment">
+
+        <TextView
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:text="యాజమాన్య పద్ధతులు"
+            android:id="@+id/tv_label_methods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_margin="5dp"
+            android:id="@+id/rv_images"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/hello_blank_fragment" />-->
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"></WebView>
+
+
+
+        <!--<ImageView-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:id="@+id/image1"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--/>-->
+
+        <!--<TextView-->
+
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:textColor="@android:color/holo_blue_light"-->
+            <!--style="@style/Base.Widget.AppCompat.Toolbar.Button.Navigation"-->
+            <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"-->
+            <!--android:text="@string/tab_text_2"-->
+            <!--android:id="@+id/tv_navigate_tab2"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+
+
+        <!--<ImageView-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:id="@+id/image2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:adjustViewBounds="true" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:id="@+id/image3"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:adjustViewBounds="true" />-->
+
+        <!--<ImageView-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:id="@+id/image4"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:adjustViewBounds="true" />-->
+
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

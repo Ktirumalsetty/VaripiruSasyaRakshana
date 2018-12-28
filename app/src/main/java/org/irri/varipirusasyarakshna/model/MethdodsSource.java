@@ -38,4 +38,13 @@ public class MethdodsSource {
     public static final int BAKANE_THEGULU = 53;
     public static final int  KANDAMU_KULLU_THEGULU = 54;
     public static final int VARIGINJA_MARPU_THEGULU = 55;
+
+    public static final int NATRAJANI_LOPAM = 56;
+    public static final int BHASWARAM_LOPAM = 57;
+    public static final int POTASSIUM_LOPAM = 58;
+    public static final int GANDHAKAM_LOPAM = 59;
+    public static final int ZYNC_LOPAM = 60;
+    public static final int INUMU_LOPAM = 61;
+    public static final int CHOWDU_NELALU_LOPAM = 62;
+
 }

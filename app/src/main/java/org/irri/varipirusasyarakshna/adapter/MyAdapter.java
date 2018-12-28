@@ -65,6 +65,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.mImageView.setImageDrawable(res);
 
         holder.mTextView.setText(mDataset.get(position).getImageName());
+        holder.mTextView.setSelected(true);
 
     }
 

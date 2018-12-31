@@ -105,9 +105,9 @@ public class LakshanaluMenuActivity extends AppCompatActivity {
     }};
 
     Map<String, Integer> mRelluRalchPuruguMap = new LinkedHashMap() {{
-        put("రెల్లురాల్చు పురుగు_1", R.drawable.rellu_ralchu_purugu_1);
-        put("రెల్లురాల్చు పురుగు_2", R.drawable.rellu_ralchu_purugu_2);
-        put("రెల్లురాల్చు పురుగు_3", R.drawable.rellu_ralchu_purugu_3);
+        put("పిలక దశలో రెల్లురాల్చు పురుగు ఆశించిన మొక్కలు", R.drawable.rellu_ralchu_purugu_1);
+        put("కంకి దశలో రెల్లురాల్చు పురుగు ఆశించిన మొక్క", R.drawable.rellu_ralchu_purugu_2);
+        put("రెల్లురాల్చు పురుగు వివిధ దశలు", R.drawable.rellu_ralchu_purugu_3);
 
 
     }};

@@ -49,13 +49,15 @@ public class HowToIdentifyFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-//    TextView mTextViewContent;
+    //    TextView mTextViewContent;
     TextView mTextViewLabelMethods;
     WebView mWebView;
     ImageView mImageViewOne;
     RecyclerView mRecyclerView;
     TextView mTvNavTab2;
     String mHowToIdentStrRes;
+    TextView mTvKalupuMokkaluTitle;
+    TextView mTvHowToIdentifyLabel;
 
     //    int[] mSudiTheguluImageUrls ={R.drawable.img_aragya_panta,R.drawable.aragya_panta_r};
 //    String[] mSudiImageTitles = {"test","test2"};
@@ -248,9 +250,9 @@ public class HowToIdentifyFragment extends Fragment {
     }};
 
     Map<String, Integer> mRelluRalchPuruguMap = new LinkedHashMap() {{
-        put("రెల్లురాల్చు పురుగు_1", R.drawable.rellu_ralchu_purugu_1);
-        put("రెల్లురాల్చు పురుగు_2", R.drawable.rellu_ralchu_purugu_2);
-        put("రెల్లురాల్చు పురుగు_3", R.drawable.rellu_ralchu_purugu_3);
+        put("పిలక దశలో రెల్లురాల్చు పురుగు ఆశించిన మొక్కలు", R.drawable.rellu_ralchu_purugu_1);
+        put("కంకి దశలో రెల్లురాల్చు పురుగు ఆశించిన మొక్క", R.drawable.rellu_ralchu_purugu_2);
+        put("రెల్లురాల్చు పురుగు వివిధ దశలు", R.drawable.rellu_ralchu_purugu_3);
 
 
     }};
@@ -287,15 +289,18 @@ public class HowToIdentifyFragment extends Fragment {
         put("భాస్వరం లోప లక్షణాలు", R.drawable.img_menu_bhaswaram_lopam);
 
 
-    }};Map<String, Integer> mPotassiumMap = new LinkedHashMap() {{
+    }};
+    Map<String, Integer> mPotassiumMap = new LinkedHashMap() {{
         put("పొటాషియం లోపం", R.drawable.img_menu_potassium_lopam);
 
 
-    }};Map<String, Integer> mGandhakamMap = new LinkedHashMap() {{
+    }};
+    Map<String, Integer> mGandhakamMap = new LinkedHashMap() {{
         put("గంధకం లోప లక్షణాలు", R.drawable.img_menu_gandhakam_lopam);
 
 
-    }};Map<String, Integer> mZyncMap = new LinkedHashMap() {{
+    }};
+    Map<String, Integer> mZyncMap = new LinkedHashMap() {{
         put("జింకు లోప లక్షణాలు", R.drawable.img_menu_zink_lopam);
 
 
@@ -304,7 +309,8 @@ public class HowToIdentifyFragment extends Fragment {
         put("ఇనుము లోప లక్షణాలు", R.drawable.img_menu_inumu_lopam);
 
 
-    }};Map<String, Integer> mChowduMap = new LinkedHashMap() {{
+    }};
+    Map<String, Integer> mChowduMap = new LinkedHashMap() {{
         put("వరి పంటపై చౌడు ప్రభావం", R.drawable.img_menu_choudu_nelalu_lopam);
 
 
@@ -422,18 +428,22 @@ public class HowToIdentifyFragment extends Fragment {
                     prepareListFromMap(mNatinaPolamuMap);
                     break;
                 case MethdodsSource.VOODA_KALUPU_MOKKA:
+
                     mHowToIdentStrRes = getString(R.string.vooda_identify);
                     prepareListFromMap(mVoodaMap);
                     break;
                 case MethdodsSource.THUNGA_JAATHI:
+
                     mHowToIdentStrRes = getString(R.string.thunga_identify);
                     prepareListFromMap(mThungaMap);
                     break;
                 case MethdodsSource.VEDALPAKU_KALUPU:
-                    mHowToIdentStrRes = getString(R.string.vedalpaku_aaku_identify);
+
+                    mHowToIdentStrRes = getString(R.string.vedalpaku_aaku_kalupu_identify);
                     prepareListFromMap(mVedalpaku_aaku);
                     break;
                 case MethdodsSource.NEETI_KALUPU:
+
                     mHowToIdentStrRes = getString(R.string.neeti_kalupu_identify);
                     prepareListFromMap(mNeeetiKalupuMap);
                     break;
@@ -550,9 +560,11 @@ public class HowToIdentifyFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_piru_vividha_dasalu_view, container, false);
             mTextViewLabelMethods = view.findViewById(R.id.tv_label_methods);
 
-        }else{
+        } else {
             view = inflater.inflate(R.layout.fragment_how_to_identify, container, false);
             TextView mTvNavigateTab2 = view.findViewById(R.id.tv_navigate_tab2);
+            mTvKalupuMokkaluTitle = view.findViewById(R.id.tv_label_kalupu_mokkalu_title);
+            mTvHowToIdentifyLabel = view.findViewById(R.id.tv_label_how_to_identify);
             mTvNavigateTab2.setPaintFlags(mTvNavigateTab2.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
             if (mParam1 == MethdodsSource.AROGYA_PANTA_DOS_DONTS) {
                 mTvNavigateTab2.setText(R.string.label_donts);
@@ -578,7 +590,33 @@ public class HowToIdentifyFragment extends Fragment {
         mRecyclerView = view.findViewById(R.id.rv_images);
         mTvNavTab2 = view.findViewById(R.id.tv_navigate_tab2);
 //        TextView mTvNavigateTab2 = view.findViewById(R.id.tv_navigate_tab2);
+        switch (mParam1) {
 
+            case MethdodsSource.VOODA_KALUPU_MOKKA:
+                mTvKalupuMokkaluTitle.setVisibility(View.VISIBLE);
+                mTvKalupuMokkaluTitle.setText("గడ్డి జాతులు (ఊద, బొంత ఊదర, నక్షత్ర గడ్డి, దోమ కాలు గడ్డి, జమ్ము గడ్డి, దొంగ వరి, దారుక)");
+
+                break;
+            case MethdodsSource.THUNGA_JAATHI:
+                mTvKalupuMokkaluTitle.setVisibility(View.VISIBLE);
+                mTvKalupuMokkaluTitle.setText("తుంగ జాతి (తుంగ, రాకాసి తుంగ, నీటి తుంగ, బ్రహ్మ తుంగ, చలి తుంగ, పీచు తుంగ, పూర గడ్డి, అల్లి గడ్డి)");
+
+                break;
+            case MethdodsSource.VEDALPAKU_KALUPU:
+                mTvKalupuMokkaluTitle.setVisibility(View.VISIBLE);
+                mTvKalupuMokkaluTitle.setText("వెడల్పాకు కలుపు (అగ్ని వేండ్రపాకు, గుంట కలగర, నీరు గొబ్బి, అమృతకాడ, లవంగమొగ్గ)");
+
+                break;
+            case MethdodsSource.NEETI_KALUPU:
+                mTvKalupuMokkaluTitle.setVisibility(View.VISIBLE);
+                mTvKalupuMokkaluTitle.setText("నీటి కలుపు (పిల్లి అడుగు, అజొల్లా, సాల్వీనియా, పిస్టియా, తూటికాడ, నీటి తామర, దిబ్బనాచ, పిసరాకు)");
+
+                break;
+            case MethdodsSource.AROGYA_PANTA_DOS_DONTS:
+                mTvHowToIdentifyLabel.setVisibility(View.GONE);
+                mTvKalupuMokkaluTitle.setVisibility(View.GONE);
+                break;
+        }
         loadContent(mHowToIdentStrRes);
         new Handler().postDelayed(new Runnable() {
             @Override
